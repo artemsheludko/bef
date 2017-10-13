@@ -4552,7 +4552,6 @@ cite {
   width: 100%;
   height: 100vh;
   min-height: 700px;
-  background-image: url(../img/bg_about.jpg);
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
@@ -4910,4 +4909,30 @@ cite {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+}
+.container{
+  display: flex;
+}
+.col-left-about{
+  min-height: 100vh;
+  flex: 1;
+  background: url("../img/face.jpg") no-repeat;
+  background-size: cover;
+  background-position: 40% 20%;
+}
+.col-right-about{
+  text-align: center;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+}
+.about-box{
+    margin: auto;
+}
+.about-box p{
+  padding: 0 10rem;
+  color: white;
+}
+.about h1{
+  color: white;
 }
