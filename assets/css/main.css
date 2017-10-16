@@ -24,7 +24,10 @@ html {
 body {
   margin: 0;
 }
-
+.container{
+  display: flex;
+  flex-direction: row;
+}
 /**
  * Add the correct display in IE 9-.
  */
@@ -4733,8 +4736,15 @@ cite {
             transform: translateY(0);
   }
 }
-
+.about-box p{
+  padding: 0 4rem;
+  color: white;
+}
 @media only screen and (max-width: 960px) {
+  .about-box p{
+    padding: 0 2rem;
+    color: white;
+  }
   .chapters {
     padding: 2rem 0;
   }
@@ -4745,6 +4755,10 @@ cite {
 }
 
 @media only screen and (max-width: 768px) {
+  .about-box p{
+    padding: 0 2rem;
+    color: white;
+  }
   #banner .content {
     padding: 7rem 0;
   }
@@ -4851,6 +4865,10 @@ cite {
 }
 
 @media only screen and (max-width: 550px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
   .post header .post_meta {
     padding: 0.3rem 1rem;
     font-size: 0.5rem;
@@ -4901,6 +4919,7 @@ cite {
 }
 
 @media only screen and (max-width: 320px) {
+
   .post header .post_meta {
     padding: 0.1rem 0.8rem;
     font-size: 0.3rem;
@@ -4910,9 +4929,7 @@ cite {
     font-size: 1.2rem;
   }
 }
-.container{
-  display: flex;
-}
+
 .col-left-about{
   min-height: 100vh;
   flex: 1;
@@ -4929,10 +4946,16 @@ cite {
 .about-box{
     margin: auto;
 }
-.about-box p{
-  padding: 0 10rem;
-  color: white;
-}
+
 .about h1{
   color: white;
+}
+img.site-logo{
+  max-width: 130px;
+}
+.main_header{
+  background-color: #fff;
+}
+.main_header nav a{
+  color: black;
 }
