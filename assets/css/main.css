@@ -4278,6 +4278,10 @@ cite {
   vertical-align: middle;
 }
 
+.post .entry_content img {
+  max-width: 100%
+}
+
 .post header .post_description {
   position: absolute;
   left: 0;
