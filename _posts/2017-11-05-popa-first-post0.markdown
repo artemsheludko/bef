@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Aupair in USA(1)"
-img: aupair1/cover1.jpg # Add image post (optional)
-date: 2017-11-05 13:42:00 +0700
-description: Popas first description goes here
-tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter]
+img: 1aupair/cover1.jpg # Add image post (optional)
+date: 2015-05-05 13:42:00 +0700
+description: Aupair in USA(1)
+tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA]
 ---
 
 # ออแพร์
@@ -57,8 +57,8 @@ tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter]
 แน่นอนว่าข้อดีก็คือการได้เที่ยวต่างประเทศ ได้พัฒนาภาษา ได้เรียนรู้ประสบการณ์ใหม่ๆ ถ้าประหยัดๆหน่อยก็อาจจะมีเงินเก็บกลับบ้านอยู่พอตัว
 แลกกับข้อเสียคือ ต้องห่างบ้าน ห่างครอบครัว หรือถ้ามีแฟนบางคนก็อาจจะถึงขั้นต้องเลิกกันแฟนถ้าความสัมพันธ์ไม่เหนียวแน่นพอ เมื่อพอไปถึงแล้วก็ต้องเสี่ยงกับการอยู่กับโฮสแฟมมิลี่ซึ่งเหมือนกับคนแปลกหน้าที่ยังไม่รู้จะเข้ากันได้รึป่าว ถ้าไม่โอเคก็จะต้องรีแมชหรือย้ายบ้านนั่นเอง แล้วจะต้องเสี่ยงเอาดาบหน้ากับบ้านใหม่อีก แต่ถ้าได้โฮสดีก็โชคดีไปค่ะ และอีกข้อเสียหนึ่งจากประสบการณ์ส่วนตัวคือ เวลาต้องกลับไทยก็จะคิดถึงเด็กมากๆค่ะ อันนี้สำหรับคนที่แฮปปี้กับครอบครัวโฮสนะ
 
-![my photo]({{ site.url }}/assets/img/aupair1/1.jpg)  
-![my photo]({{ site.url }}/assets/img/aupair1/2.jpg)  
-![my photo]({{ site.url }}/assets/img/aupair1/3.jpg)  
-![my photo]({{ site.url }}/assets/img/aupair1/4.jpg)  
-![my photo]({{ site.url }}/assets/img/aupair1/5.jpeg)
+![my photo]({{ site.url }}/assets/img/1aupair/1.jpg)    
+![my photo]({{ site.url }}/assets/img/1aupair/2.jpg)  
+![my photo]({{ site.url }}/assets/img/1aupair/3.jpg)  
+![my photo]({{ site.url }}/assets/img/1aupair/4.jpg)  
+![my photo]({{ site.url }}/assets/img/1aupair/5.jpeg)
