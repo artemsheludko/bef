@@ -61,5 +61,7 @@ tag: [Travel, Blogging, Bali, NusaPenida, Indonesia]
 ![my photo]({{ site.url }}/assets/img/11penida/19.jpg)
 
  จบทริป..นั่งเรือกลับบาหลีค่ะ
- 
+
 ![my photo]({{ site.url }}/assets/img/11penida/20.jpg)
+
+**รูปจากโทรศัพท์มือถือ samsung galaxy s7 edge (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

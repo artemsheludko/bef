@@ -17,14 +17,23 @@ tag: [Travel, Blogging, Aupair, NYC, USA]
 
 
 ![my photo]({{ site.url }}/assets/img/4NYC/2.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/3.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/4.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/5.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/6.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/7.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/8.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/9.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/10.jpg)
+
 ![my photo]({{ site.url }}/assets/img/4NYC/11.jpg)
 (สพานบุํคลิน)
 
@@ -32,3 +41,5 @@ tag: [Travel, Blogging, Aupair, NYC, USA]
 
 ![my photo]({{ site.url }}/assets/img/4NYC/13.jpeg)
 (เซนทรัล)
+
+**รูปจากโทรศัพท์มือถือ samsung note3 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

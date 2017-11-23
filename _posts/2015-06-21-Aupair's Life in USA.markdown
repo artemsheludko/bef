@@ -51,3 +51,5 @@ tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA]
 ![my photo]({{ site.url }}/assets/img/2lifeinusa/10.jpg)
 ![my photo]({{ site.url }}/assets/img/2lifeinusa/11.jpg)
 ![my photo]({{ site.url }}/assets/img/2lifeinusa/12.jpg)
+
+**รูปจากโทรศัพท์มือถือ samsung note3  (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

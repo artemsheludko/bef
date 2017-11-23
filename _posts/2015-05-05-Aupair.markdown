@@ -58,10 +58,16 @@ tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA]
 อันนี้เป็นตัวอย่างรูปภาพจากการไปฝึกเลี้ยงเด็กค่ะ แปะไว้เพื่อเป็นแนวทางการเก็บรูปโปรไฟล์สำหรับน้องๆที่สนใจนะค่ะ   
 
 ![my photo]({{ site.url }}/assets/img/1aupair/1.jpg)    
+
 ![my photo]({{ site.url }}/assets/img/1aupair/2.jpg)  
+
 ![my photo]({{ site.url }}/assets/img/1aupair/3.jpg)  
+
 ![my photo]({{ site.url }}/assets/img/1aupair/4.jpg)  
+
 ![my photo]({{ site.url }}/assets/img/1aupair/5.jpeg)
 
 ขอบคุณละอองรักเนอสเซอร์รี่ที่ให้โอกาสฝึกงานด้วยค่า
 เข้าชมเว็บไซต์ของละอองรักเนอสเซอร์รี่ได้ที่ >>
+
+**รูปจากโทรศัพท์มือถือ samsung note3  (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)
