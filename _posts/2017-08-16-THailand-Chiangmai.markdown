@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "THailand-Chiangmai"
+title: "Thailand  -Chiangmai"
 img: 9chiangmai/cover9.jpg # Add image post (optional)
 date: 2017-08-16 13:42:00 +0700
 description: THailand-chiangmai

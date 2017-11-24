@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "USA - New York City"
-img: 4NYC/cover4.jpg # Add image post (optional)
+img: 4nyc/cover4.jpg # Add image post (optional)
 date: 2015-06-25 13:42:00 +0700
 description: USA-New york city
-tag: [Travel, Blogging, Aupair, NYC, USA]
+tag: [Travel, Blogging, Aupair, nyc, USA]
 ---
 
 
-![my photo]({{ site.url }}/assets/img/4NYC/1.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/1.jpg)
 
 นิวยอร์ค ซิตี้ ขึ้นชื่อว่าเป็นเมืองแห่งความวุ่นวาย ก็วุ่นวายสมชื่อจริงๆเพราะเป็นเมืองที่ไม่เคยหลับไหล ผู้คนเพ่นพ่านตลอดทั้งวันทั้งคืน เนื่องจากเรามาเป็นออแพร์ที่นิวเจอร์ซี่ ซึ่งติดกับนิวยอร์ค ใช้เวลาเดินทางประมาณ1ชม.นิดๆก็ถึง ด้วยความที่นิวเจอร์ซี่ไม่ค่อยมีอะไรทำเท่าไหร่ พอวันหยุดก็จะนัดเพื่อนเข้านิวยอร์คค่ะ ออกจากบ้านครั้งนึงถือว่าเปลืองมาก เพราะค่าครองชีพที่อเมกาค่อนข้างสูง ค่ารถบัสไปกลับประมาณ 30 เหรียญ เป็นเงินไทยก็ประมาณพันกว่าบาท บางครั้งก็ไปเช้าเย็นกลับ หรือถ้าวันไหนไปค้างก็จะไปขออาศัยนอนกับเพื่อนออแพร์ในนิวยอร์ค เลยไม่มีค่าใช้จ่ายเรื่องที่พัก เสียแต่ค่าเดินทางไปบ้านเพื่อนเท่านั้น
 ส่วนเรื่องอาหารที่นี่ถ้าเข้าร้านถือว่าแพงมากสำหรับคนไทยเรา ข้าวจานนึงขั้นต่ำ10เหรียญ ไม่รวมทิปที่ต้องจ่ายต่างหาก รวมๆแล้วก็ประมาน 4-5ร้อยบาทไทย ต่อมื้อเล็กๆธรรมดา  ครั้งนึงเคยไปกินร้านอาหารไทยกับเพื่อนอีก2คน สั่งอาหารมา3อย่าง มีส้มตำ ต้มยำ และผัดกระเพรา (ที่ไม่เหมือนผัดกะเพราเลยสักนิด เพราะที่อเมกาไม่มีใบกระเพราะเลยใช้ใบโหระพาแทน) และข้าวอีกคนละจาน ชานมคนละแก้ว หารกัน3คน ตกคนละ20เหรียญ เป็นเงิน700บาทไทย อาหารมื้อนั้นรวมแล้วเป็นเงินสองพันกว่าบาท เจ็บค่ะ ทำเองยังอร่อยกว่าอีก หลังจากนั้นมาก็ไม่เคยคิดจะเข้าร้านอาหารไทยในอเมริกาอีกเลย
@@ -16,30 +16,30 @@ tag: [Travel, Blogging, Aupair, NYC, USA]
 คนที่นี่ส่วนมากจะนั่ง ซับเวย์กัน เหมือนรถไฟฟ้าบ้านเรานี่แหละค่ะ ค่าโดยสารเริ่มต้นครั้งละ2เหรียญ ก็ตกประมาณ70บาทไทย อันนี้คือถือว่าเป็นการเดินทางที่ประหยัดสุดแล้ว (บ้านเราสถานีที่แพงสุด52บาทยังบ่นเลย) ส่วนตัวเรากินเที่ยวไม่ค่อยเยอะค่ะ เพราะทำงานมาเริ่มเห็นเงิน เลยอยากเก็บตังมากกว่า จะใช้จ่ายแต่ที่จำเป็นเท่านั้น มีช็อปบ้างแต่ก็พวกของเซลหรือลดราคา 55+ แอบงกนิดนึง
 
 
-![my photo]({{ site.url }}/assets/img/4NYC/2.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/2.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/3.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/3.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/4.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/4.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/5.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/5.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/6.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/6.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/7.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/7.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/8.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/8.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/9.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/9.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/10.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/10.jpg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/11.jpg)
+![my photo]({{ site.url }}/assets/img/4nyc/11.jpg)
 (สพานบุํคลิน)
 
-![my photo]({{ site.url }}/assets/img/4NYC/12.jpeg)
+![my photo]({{ site.url }}/assets/img/4nyc/12.jpeg)
 
-![my photo]({{ site.url }}/assets/img/4NYC/13.jpeg)
+![my photo]({{ site.url }}/assets/img/4nyc/13.jpeg)
 (เซนทรัล)
 
 **รูปจากโทรศัพท์มือถือ samsung note3 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

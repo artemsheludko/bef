@@ -1,110 +1,110 @@
 ---
 layout: post
 title: "Thailand - Krabi"
-img: 13Krabi/cover14.jpg # Add image post (optional)
+img: 13krabi/cover14.jpg # Add image post (optional)
 date: 2017-10-28 13:42:00 +0700
-description: THailand-Krabi
-tag: [Travel, Blogging, Krabi, THailand]
+description: THailand-krabi
+tag: [Travel, Blogging, krabi, THailand]
 ---
 
-![my photo]({{ site.url }}/assets/img/13Krabi/1.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/1.jpg)
 
 เรานั่งเครื่องบินสายการบินไทยไลออนแอร์จากดอนเมืองมาลงที่สนามบินกระบี่ จากนั้นก็นั่งรถตู้มายังอ่าวนางคนละ150บาท  เราตั้งใจจะอยู่ที่กระบี่เป็นเวลา2อาทิตย์ครึ่ง ตั้งแต่วันที่28 ตุลา-15พฤศจิ 60
 
-![my photo]({{ site.url }}/assets/img/13Krabi/2.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/2.jpg)
 
 จองโรงแรมบุรีธารา ผ่านทางออนไลน์ไว้3คืน คืนละ790บาท แต่ราคานี้ไม่มีอาหารเช้านะค่ะ พอเปิดประตูเข้าไปก็ว้าวเลย ห้องสวย สะอาด ห้องน้ำมีอ่างอาบน้ำ มีสระว่ายน้ำ ติดหาดอ่าวนางเดินไปแปบเดียวก็ถึงค่ะ
 
-![my photo]({{ site.url }}/assets/img/13Krabi/3.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/3.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/4.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/4.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/5.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/5.jpg)
 
 เนื่องจากแฟนเราค่อนข้างมีปัญหาเรื่องการกินอาหารที่ประเทศไทย กินอะไรก็ท้องเสีย และเพื่อเป็นการประหยัดไปในตัว เราจึงต้องทำอาหารกินเองค่ะ เราก็เลยมองหาโรงแรมหรือที่พักที่มีห้องครัว เสริทไปเสริทมาก็มาเจอ จังเกิลวิทเลท ราคาอยู่ที่คืนละ950บาท แต่เราจะจองยาว2อาทิตย์ เลย ได้ส่วนลดเหลือคืนละ 850บาท ข้อดีของที่นี่อีกอย่างก็คือมีรถรับส่งไปหน้าหาดฟรีสองรอบต่อวัน (ซึ่งถ้านั่งรถรับจ้างไปเองก็รอบละ 150-200บาท ) แต่ไม่เคยใช้บริการเลย เช่ามอไซเอา
 
-![my photo]({{ site.url }}/assets/img/13Krabi/6.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/6.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/7.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/7.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/8.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/8.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/9.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/9.jpg)
 
 ห้องก็จะประมาณนี้ มีทุกอย่างครบ ห้องนอน ห้องน้ำ ห้องครัว มุมนั่งเล่นดูทีวี เหมือนบ้านเล็กๆหลังนึงเลย เปิดประตูออกมาก็เจอสระว่ายน้ำเลย และที่สระว่ายน้ำมากถึง3สระ
 
-![my photo]({{ site.url }}/assets/img/13Krabi/10.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/10.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/11.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/11.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/12.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/12.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/13.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/13.jpg)
 
 วันแรกของการย้ายเข้ามาอยู่ที่นี่ก็เกิดเรื่องเลยค่ะ เราเช่ามอไซไปซื้อของที่ห้างโลตัสเพื่อที่จะมาตุนไว้ทำอาหาร พอมาถึงห้องเราก็เริ่มเตรียมอาหารเพราะยังไม่ได้กินไรกันเลยตั้งแต่เช้า ระหว่างนั้นแฟนเราก็เอามอไซไปคืน สักพักก็มีคนมาเคาะประตูห้องบอกว่าแฟนเราเมาไม่ได้สติ เราก็คิดในใจ ไม่ใช่มั้ง ผิดคนรึป่าว จอนยังไม่ได้กินเหล้าสักนิดจะเมาได้ไง เราก็เลยรีบไปดู จอนจริงๆด้วย เค้าแค่เป็นลมเพราะหน้ามืด ไม่ได้เมา บวกกับหลายๆอย่างทั้ง อากาศร้อน ท้องเสียมาหลายวัน และยังไม่ได้กินข้าว จากนั้นเราก็พาเค้ากลับมาพักที่ห้อง สักพักเค้าก็บอกว่าไม่โอเคอยากไปหาหมอ เราก็เลยโทรเรียกรถโรงแรมให้ไปส่ง โรงพยาบาลกระบี่นครินทร์ ไปถึงก็เข้าห้องฉุกเฉินเลย ไม่ต้องรอคิวอะไรทั้งนั้น ระหว่างนั้นเราก็กรอกประวัติให้แฟน หมอก็ตรวจนั้นนู่นนี่
 
-![my photo]({{ site.url }}/assets/img/13Krabi/14.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/14.jpg)
 
 จังหวะตรงกับวันลอยกระทงพอดี เราก็เลยพาแฟนไปดูขนมทำเนียมประเพณีไทย แต่แฟนบอกไม่อยากลอย เพราะเหมือนทิ้งขยะลงในแม่น้ำเราก็เดินเล่นกันไปริมทะเล มีนักท่องเที่ยวมาลอยกระทงกันพอสมควร
 
-![my photo]({{ site.url }}/assets/img/13Krabi/15.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/15.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/16.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/16.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/17.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/17.jpg)
 
 
 บริเวณหน้าหาดอ่าวนาง ก็จะมีร้านอาหาร บาร์กลางคืน ร้านขายของฝาก ร้านขายทัวร์เต็มไปหมด ถามมาหลายที่ ทัวร์เกาะพีพี 1 วัน 7 ที่ ดูในเว็บราคามัน1200 แต่หน้าหาดบางร้านก็1100-1200 บางร้านเขียนลด50เปอร์เซน พอเข้าไปถาม จาก2000กว่า ก็เหลือพันกว่าอยู่ดี แฟนเราเลยบอกไม่เอา คนขายก็เลยบอกว่าโอเค งั้นให้เต็มที่800 โอเคมั้ย ถือว่าถูกสุดแล้วเท่าที่เช็คมา เราก็เลยตกลง แต่มีค่าเข้าอุทยานต่างหาก คนไทย40 ฝรั่ง400 ต่างกัน10เท่าจ้า บ้าไปแล้ว ถ้าเราไปต่างประเทศแล้วเค้าชาทเพิ่ม10เท่าบ้างจะรู้สึกยังไง?
 
-![my photo]({{ site.url }}/assets/img/13Krabi/18.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/18.jpg)
 
 เช้าวันต่อมา ก็มีรถจากบริษัททัวร์มารับจากหน้าโรงแรมไปยังท่าเรือ ระหว่างที่นั่งเรือไปยังเกาะพีพีพี่ไกด์ที่ดูแลบนเรือก็เล่าให้ฟังว่า ก่อนหน้านี้จะสวยกว่านี้มากแต่ตอนนี้ไม่ค่อยสวยแล้ว ทางอุทยานเก็บเงินไปแล้วแต่ไม่ได้เอาพัฒนาอะไรเลย ไม่รู้เงินไปอยู่ไหนหมด เราก็ใจแป้วไปเลย “ห่ะ ไม่สวยแล้ว?” รู้สึกผิดหวังนิดนึง  งืออ กระบี่ในฝันอันสวยงามของเรา
 
-![my photo]({{ site.url }}/assets/img/13Krabi/19.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/19.jpg)
 
 เรือจอดแวะรับผู้โดยสารเพิ่มที่หาดไร่เลย์ น้ำสีเขียวใสๆ บรรยากาศเริ่มสวยแล้วว
 
-![my photo]({{ site.url }}/assets/img/13Krabi/20.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/20.jpg)
 
 ผ่านเกาะไก่ แค่ผ่านเฉยๆค่ะไม่ได้แวะ ที่เรียกว่าเกาะไก่เพราะมีลักษณะเหมือนหัวและตัวไก่นั่นเอง
 
-![my photo]({{ site.url }}/assets/img/13Krabi/21.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/21.jpg)
 
 มาถึงที่เกาะไผ่เป็นที่แรก พี่ไกด์บอกว่า แต่ก่อนจะมีต้นไผ่เต็มไปหมด เลยได้ชื่อว่าเกาะไผ่ แต่ หลังจากสึนามิ ก็ไม่มีต้นไผ่เหลืออยู่แล้ว ทรายไม่ค่อยขาวแล้ว ซึ่งแต่ก่อนทรายจะขาวกว่านี้ น้ำจะใสกว่านี้ แต่เราว่าก็โอเค ยังสวยอยู่นะ
 
-![my photo]({{ site.url }}/assets/img/13Krabi/22.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/22.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/23.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/23.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/24.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/24.jpg)
 
 ผ่านถ้ำไวกิ้ง เป็นที่ทำรังของนกนางแอ่น แหล่งทำเงินมหาศาล แต่พี่ไกด์บอกว่าไม่มีใครเข้าไปเอาได้ เพราะมีคนคุมอยู่ข้างใน น่าจะเหมือนโจรสลัด ในหนังอะไรประมาณนั้น
 
-![my photo]({{ site.url }}/assets/img/13Krabi/25.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/25.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/26.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/26.jpg)
 
 ไปต่อกันที่อ่าวปิเละ ชมทะเลใน (lagoon) ถือได้ว่าสวยงามมาก มีผาสูงล้อมรอบทะเลน้ำสีเขียวมรกต พี่ไกด์อนุญาติให้แวะเล่นน้ำได้แปบนึง ประมาณ10 นาที
 
-![my photo]({{ site.url }}/assets/img/13Krabi/27.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/27.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/28.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/28.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/29.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/29.jpg)
 
 และแล้วก็มาถึงอ่าวมาหยา สถานที่ถ่ายทำหนังเรื่องเดอะบีช สวยงามสมคำร่ำลือจริงๆ
 
-![my photo]({{ site.url }}/assets/img/13Krabi/30.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/30.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/31.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/31.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/32.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/32.jpg)
 
-![my photo]({{ site.url }}/assets/img/13Krabi/33.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/33.jpg)
 
 พักกินอาหารกันที่พีพีดอน เป็นอาหารบุฟเฟ่โรงแรม ลืมถ่ายรูปมาเพราะหิวมากขอกินก่อน 55+
 
-![my photo]({{ site.url }}/assets/img/13Krabi/34.jpg)
+![my photo]({{ site.url }}/assets/img/13krabi/34.jpg)
 
 แวะดูลิงหน่อย ลิงที่นี่ว่ายน้ำได้ และกัดคน พี่ไกด์เลยให้ดูเฉยๆไม่ได้ลงจากเรือ
 
