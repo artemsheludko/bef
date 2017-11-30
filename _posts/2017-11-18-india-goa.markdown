@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Thailand - Krabi"
+img: 14goa/cover14.jpg # Add image post (optional)
+date: 2017-10-28 13:42:00 +0700
+description: THailand-krabi
+tag: [Travel, Blogging, krabi, THailand]
+---
+
+![my photo]({{ site.url }}/assets/img/14goai/1.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/2.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/3.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/4.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/5.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/6.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/7.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/8.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/9.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/10.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/11.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/12.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/13.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/14.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/15.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/16.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/17.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/18.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/19.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/20.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/21.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/22.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/23.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/24.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/25.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/26.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/27.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/28.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/29.jpg)
+
+![my photo]({{ site.url }}/assets/img/14goai/30.jpg)
+
+**รูปจากกล้อง sony cx5100 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)
