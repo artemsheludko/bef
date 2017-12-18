@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Indonesia - Bali"
-img: 10bali/cover10.jpg # Add image post (optional)
+img: 10bali/cover.jpg # Add image post (optional)
 date: 2017-09-26 13:42:00 +0700
 description: Indonesia - bali
 tag: [Travel, Blogging, bali, Indonesia]

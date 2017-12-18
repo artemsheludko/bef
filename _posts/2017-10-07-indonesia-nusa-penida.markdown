@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Indonesia-Nusa Penida"
-img: 11penida/cover11.jpg # Add image post (optional)
+title: "Indonesia - Nusa Penida"
+img: 11penida/cover.jpg # Add image post (optional)
 date: 2017-10-07 13:42:00 +0700
 description: Indonesia-Nusa Penida
-tag: [Travel, Blogging, Bali, NusaPenida, Indonesia]
+tag: [Travel, Blogging, Bali, Nusapenida, Indonesia]
 ---
 ![my photo]({{ site.url }}/assets/img/11penida/1.jpg)
 
@@ -46,7 +46,7 @@ tag: [Travel, Blogging, Bali, NusaPenida, Indonesia]
 
 ![my photo]({{ site.url }}/assets/img/11penida/14.jpg)
 
-ทะเลที่นี่ก็ใช้ได้เลยค่ะ น้ำสีฟ้าใส ถือว่าไม่ผิดหวังนะ
+ทะเลที่นี่ก็ใช้ได้เลยค่ะ น้ำสีฟ้าใส ถือว่าไม่ผิดหวังเลยจริงๆ
 
 ![my photo]({{ site.url }}/assets/img/11penida/15.jpg)
 
@@ -56,12 +56,14 @@ tag: [Travel, Blogging, Bali, NusaPenida, Indonesia]
 
 ![my photo]({{ site.url }}/assets/img/11penida/18.jpg)
 
-นอกนั้นก็ไม่มีไรมาก แค่กินลมชมหาดทรายและแฮงค์เอ้ากับเพื่อนไปวันๆ  
+นอกนั้นก็ไม่มีไรมาก แค่กินลมชมหาดทรายและแฮงค์เอ้ากับเพื่อนไปวันๆ ด้วยความที่เพื่อนแฟนเป็นคนอังกฤษหมด เราก็ฟังรู้เรื่องบ้างไม่รู้เรื่องบ้าง นี่ก็เลยจะนั่งเงียบๆหน่อย แต่จริงๆเราเฟรนลี่นะ
 
 ![my photo]({{ site.url }}/assets/img/11penida/19.jpg)
 
- จบทริป..นั่งเรือกลับบาหลีค่ะ
+สรุปค่าใช้จ่าย ค่าห้อง2คืน ค่าดำน้ำ ค่าอาหาร  
 
 ![my photo]({{ site.url }}/assets/img/11penida/20.jpg)
+
+จบทริป..นั่งเรือกลับบาหลีค่ะ
 
 **รูปจากโทรศัพท์มือถือ samsung galaxy s7 edge (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "USA - Washington D.C."
-img: 5dc/cover5.jpg # Add image post (optional)
+img: 5dc/cover.jpg # Add image post (optional)
 date: 2015-08-23 13:42:00 +0700
 description: USA-Washington D.C.
 tag: [Travel, Blogging, Aupair, Washington D.C., USA]

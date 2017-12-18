@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "India - Goa"
-img: 14goa/cover14.jpg # Add image post (optional)
+img: 14goa/cover.jpg # Add image post (optional)
 date: 2017-11-18 13:42:00 +0700
 description: THailand-krabi
 tag: [Travel, Blogging, krabi, THailand]
@@ -69,7 +69,7 @@ tag: [Travel, Blogging, krabi, THailand]
 
 ![my photo]({{ site.url }}/assets/img/14goa/21.jpg)
 
-่ความสวยของทะเลให้เทียบแค่บางแสนบ้านเรา 
+่ความสวยของทะเลให้เทียบแค่บางแสนบ้านเรา
 
 ![my photo]({{ site.url }}/assets/img/14goa/22.jpg)
 

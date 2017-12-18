@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "USA - New York City"
-img: 4nyc/cover4.jpg # Add image post (optional)
+img: 4nyc/cover.jpg # Add image post (optional)
 date: 2015-06-25 13:42:00 +0700
 description: USA-New york city
 tag: [Travel, Blogging, Aupair, nyc, USA]
@@ -28,7 +28,7 @@ tag: [Travel, Blogging, Aupair, nyc, USA]
 
 ![my photo]({{ site.url }}/assets/img/4nyc/6.jpg)
 
-ช่วงคริสมาสต์ ปีใหม่ จะจัดตกแต่งประดับประดาไฟทั่วเมือง 
+ช่วงคริสมาสต์ ปีใหม่ จะจัดตกแต่งประดับประดาไฟทั่วเมือง
 
 ![my photo]({{ site.url }}/assets/img/4nyc/7.jpg)
 
@@ -44,8 +44,8 @@ tag: [Travel, Blogging, Aupair, nyc, USA]
 (สพานบุํคลิน)
 
 ![my photo]({{ site.url }}/assets/img/4nyc/12.jpeg)
-
-![my photo]({{ site.url }}/assets/img/4nyc/13.jpeg)
 (เซนทรัล)
+
+เป็นที่ถ่ายทำหนังหลายๆเรื่อง ด้วยความที่เราไม่ใช่แฟนหนังแฟนละครเท่าไหร่ ถ้าเพื่อนไม่บอกก็ไม่รู้เรื่องหรอก
 
 **รูปจากโทรศัพท์มือถือ samsung note3 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

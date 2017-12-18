@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "USA - New jersey"
-img: 3nj/cover3.jpg # Add image post (optional)
+img: 3nj/cover.jpg # Add image post (optional)
 date: 2015-06-22 13:42:00 +0700
 description: USA - New jersey
 tag: [Travel, Blogging, Aupair, Newjersey, USA]
@@ -46,6 +46,6 @@ tag: [Travel, Blogging, Aupair, Newjersey, USA]
 
 ![my photo]({{ site.url }}/assets/img/3nj/19.jpg)
 
-![my photo]({{ site.url }}/assets/img/3nj/20.jpg)
+![my photo]({{ site.url }}/assets/img/3n/20.jpg)
 
 **รูปจากโทรศัพท์มือถือ samsung note3  กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น

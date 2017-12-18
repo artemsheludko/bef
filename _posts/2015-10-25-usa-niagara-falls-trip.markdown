@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "USA - niagara Falls Trip"
-img: 7niagara/cover7.jpg # Add image post (optional)
+img: 7niagara/cover.jpg # Add image post (optional)
 date: 2015-10-25 13:42:00 +0700
 description: USA-niagara fall trip
 tag: [Travel, Blogging, Aupair, niagara, fall, USA]
@@ -12,7 +12,7 @@ tag: [Travel, Blogging, Aupair, niagara, fall, USA]
 
 ![my photo]({{ site.url }}/assets/img/7niagara/1.jpg)
 
-วันแรกจะเป็นการทัวร์..ก่อน วันที่สองถึงเข้าน้ำตกไนแองการ่าค่ะ
+วันแรกจะเป็นการทัวร์ทั่วไปก่อน ล่องเรือชมหมู่บ้านพันปีอะไรสักอย่าง วันที่สองถึงเข้าน้ำตกไนแองการ่าค่ะ
 
 ![my photo]({{ site.url }}/assets/img/7niagara/6.jpg)
 
