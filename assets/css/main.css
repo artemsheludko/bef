@@ -1,3 +1,4 @@
+@import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
 @charset "UTF-8";
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -85,7 +86,7 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
+  font-family: monospace, monospace , 'cwTeXHei', sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -140,7 +141,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: monospace, monospace,'cwTeXHei', sans-serif;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -231,7 +232,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: 'cwTeXHei', sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -3848,7 +3849,7 @@ template {
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'cwTeXHei',"Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   background-color: #262626;
   margin: 0;
@@ -4910,4 +4911,15 @@ cite {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+}
+
+/* custom */
+
+.post_wrapper1, .entry_content1 {
+  max-width: 1000px;
+  padding: 0;
+  margin: 0 auto;
+}
+h3.chapter_title{
+  font-family: 'cwTeXHei', sans-serif;
 }

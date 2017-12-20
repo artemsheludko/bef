@@ -1,15 +1,48 @@
 ---
-layout: post
+layout: life
 title: "Sweden: Beautiful forest"
 img: sweden.jpg # Add image post (optional)
 date: 2017-07-12 12:52:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 tag: [Sweden, Travel, Forest]
 ---
-Flexitarian hella quinoa, stumptown chillwave squid heirloom pop-up church-key. Chicharrones prism copper mug tousled raw denim kinfolk gentrify cornhole hexagon tacos bespoke squid farm-to-table snackwave everyday carry. Vaporware chicharrones activated charcoal jianbing pok pok. Selfies live-edge unicorn kale chips jean shorts authentic pickled gochujang pork belly whatever chicharrones leggings chartreuse gluten-free irony. Trust fund shoreditch hammock, helvetica succulents pug ethical waistcoat VHS tbh air plant iceland banjo tote bag fanny pack. Ramps ugh readymade copper mug, gastropub hexagon squid semiotics post-ironic humblebrag farm-to-table enamel pin. Gochujang chia portland hexagon roof party post-ironic, semiotics street art tbh synth. Air plant vinyl sustainable pork belly. Chicharrones cronut raw denim listicle flexitarian franzen. Actually kickstarter pinterest chillwave mlkshk VHS drinking vinegar gastropub pabst poke swag mustache coloring book.
+<main>
+		  <ul>
+			<li><a href="#tab1" class="now">終生學習是為了甚麼?</a></li>
+			<li><a href="#tab2">02</a></li>
+			<li><a href="#tab3">03</a></li>
+			<li><a href="#tab4">04</a></li>
+		  </ul>
+		  <div id="A">
+			<div id="tab1">
+			  <p><strong>終生學習是為了甚麼?</strong></p>
+			  <p>終生學習是為了甚麼?</p>
+			  <P>沈宜妮(安琦)
 
-Sriracha gochujang before they sold out, photo booth trust fund raw denim iceland. Jean shorts messenger bag meh, try-hard lumbersexual four dollar toast banh mi trust fund church-key pok pok quinoa +1 tbh. Wayfarers tilde gentrify vexillologist pitchfork air plant meditation heirloom polaroid asymmetrical la croix dreamcatcher man bun ennui brooklyn. Seitan fingerstache ugh lyft, aesthetic succulents hot chicken literally chambray helvetica. DIY butcher poutine, cred scenester iceland taxidermy retro tumeric viral. Humblebrag knausgaard kinfolk, af dreamcatcher bicycle rights gochujang. Bushwick bicycle rights direct trade, ethical photo booth gastropub hell of microdosing fingerstache offal affogato. Small batch godard try-hard prism kale chips, four loko cray semiotics helvetica subway tile heirloom vaporware. Venmo VHS keytar succulents chambray.
+https://hahow.in/
+早上學習架設網站，下午學會手沖咖啡，晚上當DJ順便練練Beatbox。新時代跨領域募資學習平台，讓你輕鬆在網路上找到來自不同領域的老師。隨時隨地，無限次觀看與學習，方便、多元、易上手，想學甚麼，現在就動手去挖掘！
 
-> Brunch hella poutine authentic farm-to-table. Stumptown craft beer lomo, heirloom single-origin coffee synth PBR&B post-ironic. <cite>- Lorem Ipsum</cite>
 
-Banh mi hoodie viral, jianbing 3 wolf moon meditation tbh pok pok everyday carry lumbersexual kombucha iPhone. Kale chips bespoke gentrify, hella organic artisan bicycle rights cardigan listicle echo park letterpress pork belly yuccie tofu live-edge. Cred crucifix ethical, cloud bread 90's waistcoat vice hoodie master cleanse sustainable salvia trust fund. Ethical activated charcoal live-edge, bushwick paleo PBR&B master cleanse affogato. Hot chicken listicle VHS hexagon, retro brooklyn quinoa ramps mustache kickstarter man braid af godard trust fund authentic. Food truck kickstarter trust fund bespoke fingerstache polaroid humblebrag affogato air plant. Heirloom pabst gochujang, art party enamel pin aesthetic 90's typewriter coloring book DIY cliche chartreuse try-hard. DIY street art flexitarian, viral 3 wolf moon fashion axe retro art party tbh green juice franzen literally. Enamel pin trust fund yuccie, before they sold out wolf jean shorts cliche intelligentsia chambray.
+
+
+如果要找便宜又有一定師資保障的課程，那救國絕對是首選，如果有考證照需求的人也多半會選擇救國團課程。救國團也會開設各式各樣的營隊和夏令營冬令營可以參加
+https://www.cyccea.org.tw/IISystem/Portal/blue/
+
+
+『終身學習』應該是人們在多元化的生活方式中，去從事廣泛範圍的活動，獲得新的生活或行為模式，以追求更好的生存之道。學習不一定是上課，在生活上體驗各種不同的事物，也算是終身學習。
+</p>
+			</div>
+			<div id="tab2">
+			  <p><strong>02</strong></p>
+			  <p>TAB2</p>
+			</div>
+			<div id="tab3">
+			  <p><strong>03</strong></p>
+			  <p>TAB3</p>
+			</div>
+			<div id="tab4">
+			  <p><strong>04</strong></p>
+			  <p>TAB4</p>
+			</div>
+		  </div>
+		</main>
