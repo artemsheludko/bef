@@ -52,6 +52,7 @@ tag: [Travel, Blogging, krabi, THailand]
 
 ![my photo]({{ site.url }}/assets/img/14goa/13.jpg)
 
+และที่ขาดไม่ได้เลยก็คือ ซูซิ อีกตามเคยค่ะ อย่างที่บอก ไม่ว่าจะไปที่ไหนก็ต้องได้กินซูซิ แต่บอกเลยที่นี่แพงก็แพงแถมไม่ได้อร่อยอย่างที่คิด  
 
 ![my photo]({{ site.url }}/assets/img/14goa/14.jpg)
 
@@ -63,17 +64,10 @@ tag: [Travel, Blogging, krabi, THailand]
 
 ![my photo]({{ site.url }}/assets/img/14goa/18.jpg)
 
-![my photo]({{ site.url }}/assets/img/14goa/19.jpg)
-
-![my photo]({{ site.url }}/assets/img/14goa/20.jpg)
-
-![my photo]({{ site.url }}/assets/img/14goa/21.jpg)
 
 ่ความสวยของทะเลให้เทียบแค่บางแสนบ้านเรา คนเยอะมาก พลุกพล่านวุ่นวาย ไม่กล้าลงเล่นน้ำทะเลเลย
 
-![my photo]({{ site.url }}/assets/img/14goa/22.jpg)
 
-![my photo]({{ site.url }}/assets/img/14goa/23.jpg)
 
 สรุปค่าใช้จ่าย (สำหรับ10วัน)
 ค่าตั๋วเครื่องบิน จากกรุงเทพ ไป Kolkata และจาก Kolkata ไป Goa 2 คน = 13000บาท
@@ -83,7 +77,6 @@ tag: [Travel, Blogging, krabi, THailand]
 รวมแล้วค่าเสียหายทั้งหมดประมาณ 33000 บาทไทย
 
 สรุปแล้วไม่ค่อยประจำใจเท่าไหร่ เที่ยวทะเลที่เมืองไทยเรายังสวยกว่ามาก ถ้าไม่มาเจอพ่อแฟนก็คงไม่คิดว่าจะมา
-
 
 
 **รูปจากกล้อง sony cx5100 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)
