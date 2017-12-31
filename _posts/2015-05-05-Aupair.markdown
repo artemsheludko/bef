@@ -67,6 +67,9 @@ tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA]
 
 ![my photo]({{ site.url }}/assets/img/1aupair/5.jpeg)
 
+![my photo]({{ site.url }}/assets/img/1aupair/5.jpeg)  ้าัเรัเะีดีะดีะด
+
+
 ขอบคุณละอองรักเนอสเซอร์รี่ที่ให้โอกาสฝึกงานด้วยค่า
 เข้าชมเว็บไซต์ของละอองรักเนอสเซอร์รี่ได้ที่ >>
 
