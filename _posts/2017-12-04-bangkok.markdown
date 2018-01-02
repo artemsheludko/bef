@@ -1,9 +1,0 @@
----
-layout: post
-title: "bangkok"
-img: bangkok/cover.jpg # Add image post (optional)
-date: 2017-12-03 13:42:00 +0700
-description:
-tag: [Travel, Blogging, Tajmahal, Agra, India]
----
-4tg5tyhyuyjijhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
