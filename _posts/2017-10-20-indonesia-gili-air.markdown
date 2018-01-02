@@ -102,5 +102,4 @@ tag: [Travel, Blogging, Bali, GiliAir, Indonesia]
 ค่าโรงแรม คืนละ 900 บาท
 ค่าอาหาร และเครื่องดื่ม   
 
-
 **รูปจากโทรศัพท์มือถือ samsung galaxy s7 edge กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น

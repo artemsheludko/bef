@@ -65,11 +65,10 @@ tag: [Travel, Blogging, Bali, Nusapenida, Indonesia]
 ![my photo]({{ site.url }}/assets/img/11penida/20.jpg)
 
 สรุปค่าใช้จ่าย    
-ค่าเรือ    
+ค่าเรือ 2 คน 2 รอบไปกลับ  1690  
 ค่าโรงแรม คืนละ1650*2 = 3300    
 ค่าเช่ารถมอไซ 3 วัน    
 ค่าอาหาร     
-
 
 
 **รูปจากโทรศัพท์มือถือ samsung galaxy s7 edge (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)
