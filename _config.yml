@@ -16,18 +16,18 @@ banner-desc: # add banner description
 # Author settings
 author-pic: face.jpg # your photo
 author-name: Popa Pompom
-about-author: About Popa
-email: your-email@domain.com # your email
+about-author: Traveler Babysitter Tattoo Artist
+email: popa.pompom@gmail.com
 phone: # your phone number
 website: https://dwayne.example.com # you website
 
 # Social link
 google_url:    # add url link
 twitter_url:   # add url link
-instagram_url: # add url link
+instagram_url:
 pinterest_url: # add url link
 dribbble_url:  # add url link
-facebook_url:  # add url link
+facebook_url:  https://www.facebook.com/popa.pompom
 
 # Disqus
 discus_identifier: mr-brown # add your discus identifier
