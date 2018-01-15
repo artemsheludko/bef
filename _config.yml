@@ -1,4 +1,5 @@
-logo: PopaTato # add logo name
+logo-one: Popa
+logo-two: Tato
 title: Popa Tato
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
