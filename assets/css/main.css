@@ -3999,7 +3999,6 @@ cite {
 
 .chapters .chapter {
   position: relative;
-  float: left;
   width: 32.333%;
   margin: 0 0.5% 1% 0.5%;
   overflow: hidden;
