@@ -3901,6 +3901,11 @@ cite {
   margin: 0 auto;
 }
 
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .button_back {
   color: #ffffff;
   font-size: 1.1rem;
