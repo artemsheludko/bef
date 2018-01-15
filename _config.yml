@@ -1,4 +1,4 @@
-logo: # add logo name
+logo: PopaTato # add logo name
 title: Popa Tato
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -10,8 +10,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
 video: mountains.mp4 # add banner video. Add your video file to the folder video
-banner-title: Popa Tato # add banner title
-banner-desc: A banner description # add banner description
+banner-title: Popa's Travel Diary # add banner title
+banner-desc: It's not just traveling; its life - ไม่ใช่แค่เที่ยวแต่มันคือการใช้ชีวิต # add banner description
 
 # Author settings
 author-pic: face.jpg # your photo
