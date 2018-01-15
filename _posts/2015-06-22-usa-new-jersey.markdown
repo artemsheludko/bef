@@ -4,7 +4,7 @@ title: "USA - New jersey"
 img: 3nj/cover.jpg # Add image post (optional)
 date: 2015-06-22 13:42:00 +0700
 description: USA - New jersey
-tag: [Travel, Blogging, Aupair, Newjersey, USA]
+tag: [Travel, Blogging, Aupair, Newjersey, USA ออแพร์, นิวเจอร์ซี, อเมริกา]
 ---
 
 เนื่องด้วยการมาเป็นออแพร์อเมริกา ทำให้เราได้ย้ายมาอยู่ที่นี่ รัฐนิเจอร์ซี่แห่งนี้จึงเป็นบ้านใหม่สำหรับเรา แต่เป็นเมืองที่เงียบๆส่วนตัวคิดว่าไม่ค่อยมีอะไรพิเศษเท่าไหร่ ได้ไปเที่ยวบ้าง

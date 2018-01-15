@@ -4,7 +4,7 @@ title: "Aupair's Life in USA"
 img: 2lifeinusa/cover.jpg # Add image post (optional)
 date: 2015-06-21 13:42:00 +0700
 description: Aupair's Life in USA
-tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA]
+tag: [Travel, Blogging, Aupair, Nanny, ฺBabysitter, USA, ออแพร,์ ออแพร์อเมริกา]
 ---
 
 # Life in USA  
