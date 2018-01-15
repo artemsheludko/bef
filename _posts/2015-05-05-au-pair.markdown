@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aupair"
+title: "How to be an Au Pair"
 img: 1aupair/cover.jpg # Add image post (optional)
 date: 2015-05-05 13:42:00 +0700
 description: Aupair

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "THailand - Kohphangan - Nangyuan"
+title: "Thailand - Kohphangan - Nangyuan"
 img: 8kohphangan/cover.jpg # Add image post (optional)
 date: 2016-08-16 13:42:00 +0700
-description: THailand-Kohphangan
-tag: [Travel, Blogging, Kohphangan, THailand]
+description: Thailand - Koh Phangan
+tag: [Travel, Blogging, Kohphangan, Thailand]
 ---
 
 ทริปนี้ไปกับเพื่อนสาว1คนค่ะ ระยะเวลาทั้งหมด 5วัน 4คืน เริ่มจากนั่งเครื่องบินจากสนามบินดอนเมืองไปลงสนามบินสุราษธานี ได้โปรโมชั้นตั๋วจากนกแอร์ในราคารวมภาษี 700บาท จากนั้นก็ต่อรถตู้จากสนามบินไปยังท่าเรือดอนสักหรือท่าเรือซีทราน ใช้เวลาประมาณ 1 ชั่วโมง เราไปถึงรอบดึกค่ะ เรือธรรมดาหมดแล้วเหลือแต่เรือนอน ปกติเรือธรรมดาในตอนกลางวัน จะใช้ระยะเวลาเดินทาง2ชั่วโมงถึง แต่เรือนอนใช้เวลา7ชั่วโมง คนละ400 บาท คิดซะว่าเป็นค่าโรงแรมไป นอนไปยาวๆตื่นมาก็เด่วก็ถึงค่ะ

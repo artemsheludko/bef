@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "USA - niagara Falls Trip"
+title: "USA - Niagara Falls Trip"
 img: 7niagara/cover.jpg # Add image post (optional)
 date: 2015-10-25 13:42:00 +0700
 description: USA-niagara fall trip

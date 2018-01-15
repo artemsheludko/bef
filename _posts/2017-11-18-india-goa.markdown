@@ -3,7 +3,7 @@ layout: post
 title: "India - Goa"
 img: 14goa/cover.jpg # Add image post (optional)
 date: 2017-11-18 13:42:00 +0700
-description: THailand-krabi
+description: Thailand-krabi
 tag: [Travel, Blogging, goa, India]
 ---
 

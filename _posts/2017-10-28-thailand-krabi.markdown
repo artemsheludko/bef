@@ -3,8 +3,8 @@ layout: post
 title: "Thailand - Krabi"
 img: 13krabi/cover.jpg # Add image post (optional)
 date: 2017-10-28 13:42:00 +0700
-description: THailand-krabi
-tag: [Travel, Blogging, krabi, THailand]
+description: Thailand-krabi
+tag: [Travel, Blogging, krabi, Thailand]
 ---
 
 ![my photo]({{ site.url }}/assets/img/13krabi/1.jpg)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Aupair's Life in USA"
+title: "Au Pair's Life in USA"
 img: 2lifeinusa/cover.jpg # Add image post (optional)
 date: 2015-06-21 13:42:00 +0700
 description: Aupair's Life in USA
