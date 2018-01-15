@@ -10,8 +10,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
 video: mountains.mp4 # add banner video. Add your video file to the folder video
-banner-title: # add banner title
-banner-desc: # add banner description
+banner-title: Popa Tato # add banner title
+banner-desc: A banner description # add banner description
 
 # Author settings
 author-pic: face.jpg # your photo
