@@ -2,9 +2,9 @@
 layout: post
 title: "USA - Pennsylvania"
 img: 6pa/cover.jpg # Add image post (optional)
-date: 2015-10-10 13:42:00 +0700
+date: 2015-07-10 13:42:00 +0700
 description: USA-Pennsylvania
-tag: [Travel, Blogging, Aupair, Pennsylvania, USA]
+tag: [Travel, Blogging, Aupair, Pennsylvania, USA , เพนซิลเวเนีย, อเมริกา]
 ---
 
 ติดกับนิวเจอร์ซี่ก็เพนซิลเวเนียนี่แหละค่ะ เคยเดทกับผู้ชายเมืองนี้ก็เลยมีโอกาศได้แวะไปบ่อย และพอดีได้มีโอกาศรู้จักพี่คนไทยคนหนึ่งเคยเป็นอดีตออแพร์ที่แต่งงานที่นี่ นางชวนมาเที่ยวชมงานที่เพนซิลเวเนีย ขับรถจากนิวเจอร์ซี่มาประมาณ 1-2ชั่วโมง อากาศกำลังดีไม่หนาวไม่ร้อน

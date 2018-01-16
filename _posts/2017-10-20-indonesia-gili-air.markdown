@@ -3,8 +3,8 @@ layout: post
 title: "Indonesia - Gili Air"
 img: 12gili/cover.jpg # Add image post (optional)
 date: 2017-10-07 13:42:00 +0700
-description: Indonesia-Gili Air
-tag: [Travel, Blogging, Bali, GiliAir, Indonesia]
+description: Indonesia - Gili Air
+tag: [Travel, Blogging, Bali, GiliAir, Island, Indonesia, บาหลี, กิลิแอร์, อินโดนีเซีย]
 ---
 
  “กิลี” เป็นเกาะเล็กๆ ในประเทศอินโดนีเซีย แบ่งออกเป็น 3 เกาะด้วยกันคือ gili Trawangan , gili Meno และ gili Air เห็นว่าแต่ละเกาะก็จะคล้ายๆกัน ในที่นี้เราจะพูดถึง gili Air นะค่ะ เพราะไปมาแค่เกาะเดียว แหะๆ
@@ -53,9 +53,9 @@ tag: [Travel, Blogging, Bali, GiliAir, Indonesia]
 
 ![my photo]({{ site.url }}/assets/img/12gili/12.jpg)
 
-บรรยากาศที่นี่ดีมากจริงๆค่ะ ทะเลสวย น้ำทะเลใสสีฟ้า บางที่จะเป็นเขียวมรกตบ้าง บลูโอเชี่ยนบ้าง เป็นอีกครั้งที่ได้เห็นน้ำทะเลสีฟ้าแบบฟ้าจริงๆ ประทับใจมากๆค่ะ
-
 ![my photo]({{ site.url }}/assets/img/12gili/13.jpg)
+
+บรรยากาศที่นี่ดีมากจริงๆค่ะ ทะเลสวย น้ำทะเลใสสีฟ้า บางที่จะเป็นเขียวมรกตบ้าง บลูโอเชี่ยนบ้าง เป็นอีกครั้งที่ได้เห็นน้ำทะเลสีฟ้าแบบฟ้าจริงๆ ประทับใจมากๆค่ะ
 
 ![my photo]({{ site.url }}/assets/img/12gili/14.jpg)
 
