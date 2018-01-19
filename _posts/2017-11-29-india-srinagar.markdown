@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "India - Srinagar"
+title: "India - Srinagar (Himalaya)"
 img: 16srinagar/cover.jpg # Add image post (optional)
 date: 2017-11-29 13:00:00 +0700
-description: 4 วัน 3 คืน ในเมืองศรีนครา ตะลุยเถือกเขาหิมาลัยที่ปกคลุมไปด้วยหิมะ นอนบนเรือ House boat และบรรยากาศสุดโรแมนติก
-tag: [Travel, Blogging, Himalaya, Mountains, Srinagar, India, House boat, หิมาลัย, อินเดีย ]
+description: 4 วัน 3 คืน ในเมืองศรีนครา ตะลุยเทือกเขาหิมาลัยที่ปกคลุมไปด้วยหิมะขาวโพลน นอนบนเรือ House boat กับบรรยากาศสุดโรแมนติกที่ open lake
+tag: [Travel, Blogging, House boat, open lake, Himalaya, Mountains, Srinagar, India, หิมาลัย, อินเดีย ]
 ---
 
 ต่อจากโพสที่แล้วที่เมืองนิวเดลีค่ะ ซึ่งเราซื้อทัวร์จากพนักงานโฮสเทลไปหิมาลัย 4 วัน 3 คืน ในราคาคนละ 12000 รูปี (หรือประมาณ 6000 บาทไทย/ต่อคน) รวมตั๋วเครื่องบิน รถรับส่งจากสนามบิน ที่พัก 3 คืน และอาหารวันละ 3 มื้อ (ที่จริงก็ได้กินแค่ 2 มื้อ เช้า-เย็น เพราะกลางวันไม่เคยได้อยู่ห้องค่ะ)
