@@ -85,4 +85,4 @@ tag: [Travel, Blogging, House boat, open lake, Himalaya, Mountains, Srinagar, In
 
 ### รวม 15,250 บาท  
 
-**รูปจากกล้อง sony a5100 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น
+**รูปจากกล้อง sony a5100 (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)
