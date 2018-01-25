@@ -63,7 +63,7 @@ tag: [Travel, Blogging, snorkeling, Bali, Nusapenida, island, Indonesia]
 
 ![Image of Nusa Penida beach]({{ site.url }}/assets/img/11penida/17.jpg)
 
-จบทริป..นั่งเรือกลับบาหลีค่ะ
+จบทริป..นั่งเรือกลับบาหลีจ้า
 
 ### สรุปค่าใช้จ่าย (2 คน / 3 วัน 2 คืน)  
 - ค่าเรือ 2 คน 2 รอบ (ไป-กลับ) = 1,690 บาท  
