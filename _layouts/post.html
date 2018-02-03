@@ -19,6 +19,9 @@ layout: default
       {% unless page.tags contains "English" %}
         {% include language_warning.html %}
       {% endunless %}
+      {% if page.tags contains "English" %}
+        {% include english_available.html %}
+      {% endif %}
       {{page.content | markdownify}}
     </div>
     
