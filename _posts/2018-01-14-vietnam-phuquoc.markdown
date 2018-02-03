@@ -4,7 +4,7 @@ title: "Vietnam - Phu Quoc Island"
 img: 19phuquoc/cover.jpg # Add image post (optional)
 date: 2018-01-14 13:00:00 +0700
 description:
-tag: [Travel, Blogging, vinpearl, waterpark, snorkeling, fishing, finger island, long beach, sao beach, phu quoc, island, beach, Vietnam, ฟูโกว๊ก, เวียดนาม]
+tag: [Travel, Blogging, vinpearl, waterpark, snorkeling, fishing, finger island, long beach, sao beach, phu quoc, island, beach, Vietnam, ฟูโกว๊ก, เวียดนาม, English]
 ---
 <p class="thai">
 จากโพสที่แล้ว เราเดินทางจากกรุงเทพไปอยู่เมือง <a href="/Hochiminh/" target="_ blank">Ho chi minh</a>  ได้ 2 คืน ก็ต้องบอกลาเมืองหลวงอันแสนวุ่นวายเพราะเสียงรถที่หนวกหูไปหน่อยเลยอยู่ไม่ไหวจ้า ตอนแรกคุณแฟนถึงขั้นจะย้ายไปประเทศอื่นด้วยซ้ำ แต่เรายังไม่ยอมแพ้ค่ะ ไหนๆก็มาแล้วลองไปสำรวจเมืองอื่นบ้างแล้วกัน และแล้วเราก็เลือกมากันที่นี่ค่ะเกาะ Phu Quoc (ฟูโก๊วก หรือ ฟูก๊วก) เมืองไข่มุกแห่งเวียดนาม เป็นอีกเกาะหนึ่งของเวียดนามที่กำลังเป็นที่จับตามองของนักท่องเที่ยวในขณะนี้ โดยเรานั่งเครื่องสายการบิน Jetstar จากโฮจิมินห์มาใช้เวลาประมาณ 1 ชั่วโมง และจะอยู่ที่นี่กันทั้งหมด 10 วัน ค่ะ
@@ -163,7 +163,7 @@ The food here is mostly seafood. But my boyfriend don't really like to eat it. s
 </p>
 
 <p class="english hide">
-finish this trip in Phuquoc. See you next trip in <a href="/vietnam-dalat/" target="_ blank">Da lat</a> city
+finish this trip in Phuquoc. See you next trip in <a href="/vietnam-dalat/" target="_ blank">Dalat</a> city
 </p>
 
 <h3 class="thai">สรุปค่าใช้จ่าย ( 2 คน / 10 คืน )</h3>
@@ -183,7 +183,7 @@ finish this trip in Phuquoc. See you next trip in <a href="/vietnam-dalat/" targ
 <ul class="english hide">
     <li>Flights (2 people, one way Ho chi minh-Phu qouc) = $68</li>
     <li>Taxi (airport to hotel) = $5</li>
-    <li>Taxi (hotel to airport) = $5 THB</li>
+    <li>Taxi (hotel to airport) = $5</li>
     <li>Hotel (10 nights, private room) = $254</li>
     <li>scooter (9 days + gas) = $60</li>
     <li>snorkeling trip ($22 x 2 people) = $44</li>
@@ -191,7 +191,6 @@ finish this trip in Phuquoc. See you next trip in <a href="/vietnam-dalat/" targ
     <li>Food  = $235</li>
 </ul>
 <h3 class="english hide">Total = $711</h3>
-
 
 
 **รูปจากกล้องโทรศัพท์มือถือ moto g5s plus (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)

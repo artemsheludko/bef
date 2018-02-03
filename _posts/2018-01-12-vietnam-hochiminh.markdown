@@ -68,20 +68,20 @@ The landmarks that we had the opportunity to visit were the Saigon Center Post O
     <li>ค่าตั๋วเครื่องบินขาไป 2 คน = 3,520 บาท</li>
     <li>ค่าอูเบอร์จากสนามบินไปที่พัก = 180 บาท</li>
     <li>ค่าอูเบอร์จากที่พักไปสนามบิน = 165 บาท</li>
-    <li>ค่าที่พัก 2 คืน = 980 บาท</li>
+    <li>ค่าที่พัก 2 คืน = 950 บาท</li>
     <li>ค่าอาหาร 4 มื้อ = 600 บาท</li>
 </ul>
-<h3 class="thai">รวม = 5,445 บาท</h3>
+<h3 class="thai">รวม = 5,415 บาท</h3>
 
-<h3 class="english hide">Costs</h3>
+<h3 class="english hide">Costs ( 2 ppl / 2 nights )</h3>
 <ul class="english hide">
-    <li>Flights (2 people, one way BKK-SGN) = 3,520 THB</li>
-    <li>Uber (airport to hotel) = 180 THB</li>
-    <li>Uber (hotel to airport) = 165 THB</li>
-    <li>Hotel (2 nights, private room) = 980 THB</li>
-    <li>Food (4 meals x 2 people) = 600 THB</li>
+    <li>Flights (2 people, one way BKK-SGN) = $104</li>
+    <li>Uber (airport to hotel) = $5</li>
+    <li>Uber (hotel to airport) = $5</li>
+    <li>Hotel (2 nights, private room) = $28</li>
+    <li>Food (4 meals x 2 people) = $18</li>
 </ul>
-<h3 class="english hide">Total = 5,445 THB</h3>
+<h3 class="english hide">Total = $160</h3>
 
 <p class="thai">**รูปจากกล้องโทรศัพท์มือถือ moto g5s plus (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)</p>  
 <p class="english hide">Photos from moto g5s plus (no photoshop)</p>
