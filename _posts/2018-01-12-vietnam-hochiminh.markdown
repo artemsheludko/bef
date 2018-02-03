@@ -66,7 +66,7 @@ In the city, the traffic is not as bad as Bangkok, because most people ride scoo
 The landmarks that we had the opportunity to visit were the Saigon Center Post Office and Notre Dame Cathedral Saigon Cathedral, which are right next to each other. It was easy to find and not too far from our accommodation (2km). The old architecture of this place resembles the European style. Other than this we didn't go anywhere else because we flew to another city instead. You can see pictures of the next place we went in my <a href="/vietnam-phuquoc/">Phu Quoc Island</a> post.  
 </p>
 
-<h3 class="thai"> สรุปค่าใช้จ่าย ( 2 คน / 2 คืน )</h3>
+<h3 class="thai">สรุปค่าใช้จ่าย ( 2 คน / 2 คืน )</h3>
 <ul class="thai">
     <li>ค่าตั๋วเครื่องบินขาไป 2 คน = 3,520 บาท</li>
     <li>ค่าอูเบอร์จากสนามบินไปที่พัก = 180 บาท</li>
