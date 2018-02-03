@@ -1,3 +1,13 @@
+function toggleLanguage() {
+  var language = localStorage.getItem("language");
+
+  if(language === "en") {
+    toThai();
+  } else {
+    toEnglish();
+  }
+}
+
 function toEnglish() {
   var englishDivs = document.getElementsByClassName("english");
   var thaiDivs = document.getElementsByClassName("thai");
@@ -9,6 +19,14 @@ function toEnglish() {
   }
 
   localStorage.setItem("language", "en");
+
+  document.getElementById("en-header-text").classList.add("pink");
+  document.getElementById("th-header-text").classList.remove("pink");
+
+  var languageWarningEl = document.getElementById("language-warning");
+  if(languageWarningEl !== null) {
+    languageWarningEl.classList.remove("hide");
+  }
 }
 
 function toThai() {
@@ -24,6 +42,14 @@ function toThai() {
   }
 
   localStorage.setItem("language", "th");
+
+  document.getElementById("th-header-text").classList.add("pink");
+  document.getElementById("en-header-text").classList.remove("pink");
+
+  var languageWarningEl = document.getElementById("language-warning");
+  if(languageWarningEl !== null) {
+    languageWarningEl.classList.add("hide");
+  }
 }
 
 var language = localStorage.getItem("language");

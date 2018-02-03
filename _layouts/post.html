@@ -16,9 +16,9 @@ layout: default
     </header> <!-- End Header -->
 
     <div class="entry_content">
-      {% if page.tags contains "English" %}
-        {% include post_language_select.html %}
-      {% endif %}
+      {% unless page.tags contains "English" %}
+        {% include language_warning.html %}
+      {% endunless %}
       {{page.content | markdownify}}
     </div>
     
