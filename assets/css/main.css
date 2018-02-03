@@ -4920,3 +4920,11 @@ cite {
     font-size: 1.2rem;
   }
 }
+
+.hide {
+    display: none
+}
+
+.center {
+    text-align: center
+}
