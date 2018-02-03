@@ -7,11 +7,15 @@ description:
 tag: [Travel, Blogging, vinpearl, waterpark, snorkeling, fishing, fingerisland, longbeach, saobeach, phu quoc, island, beach, Vietnam, ฟูโกว๊ก, เวียดนาม]
 ---
 
-จากโพสที่แล้ว เดินทางจากกรุงเทพไปอยู่ <a href="/Hochiminh/" target="_ blank">Ho chi minh</a>  ได้ 2 คืน ก็ต้องบอกลาเมืองหลวงอันแสนวุ่นวายเพราะเสียงรถที่หนวกหูไปหน่อยเลยอยู่ไม่ไหวจ้า ตอนแรกคุณแฟนถึงขั้นจะย้ายไปประเทศอื่นด้วยซ้ำ แต่เรายังไม่ยอมแพ้ค่ะ ไหนๆก็มาแล้วลองไปสำรวจเมืองอื่นบ้างแล้วกัน และแล้วเราก็เลือกมากันที่นี่ค่ะเกาะ Phu Quoc (ฟูโก๊วก หรือ ฟูก๊วก) เป็นอีกเกาะหนึ่งของเวียดนามที่กำลังเป็นที่จับตามองของนักท่องเที่ยวในขณะนี้ โดยเรานั่งเครื่องสายการบิน Jetstar จากโฮจิมินห์มาใช้เวลาประมาณ 1 ชั่วโมง และจะอยู่ที่นี่กันทั้งหมด 10 วัน 9 คืนค่ะ
+จากโพสที่แล้ว เราเดินทางจากกรุงเทพไปอยู่เมือง <a href="/Hochiminh/" target="_ blank">Ho chi minh</a>  ได้ 2 คืน ก็ต้องบอกลาเมืองหลวงอันแสนวุ่นวายเพราะเสียงรถที่หนวกหูไปหน่อยเลยอยู่ไม่ไหวจ้า ตอนแรกคุณแฟนถึงขั้นจะย้ายไปประเทศอื่นด้วยซ้ำ แต่เรายังไม่ยอมแพ้ค่ะ ไหนๆก็มาแล้วลองไปสำรวจเมืองอื่นบ้างแล้วกัน และแล้วเราก็เลือกมากันที่นี่ค่ะเกาะ Phu Quoc (ฟูโก๊วก หรือ ฟูก๊วก) เมืองไข่มุกแห่งเวียดนาม เป็นอีกเกาะหนึ่งของเวียดนามที่กำลังเป็นที่จับตามองของนักท่องเที่ยวในขณะนี้ โดยเรานั่งเครื่องสายการบิน Jetstar จากโฮจิมินห์มาใช้เวลาประมาณ 1 ชั่วโมง และจะอยู่ที่นี่กันทั้งหมด 10 วัน 9 คืนค่ะ
+
+From the last post. we fly from Bangkok to <a href="/Hochiminh/" target="_ blank">Ho chi minh</a> city. stay there for 2 nights and have to say goodbye this busy city because too noisy form the car could not live up to it. finally we select to go to Phu Quoc Island is one of the island in Vietnam that become a tourists area now. We take a Jetstar flight from Ho Chi Minh for about an hour and will be here for a total of 10 days 9 nights.
 
 ![Image of canary hostel]({{ site.url }}/assets/img/19phuquoc/1.jpg)
 
 พอลงเครื่องก็เรียกแท็กซี่จากสนามบินไปยังที่พักใช้เวลาเพียง 15 นาที ก็ถึง Canary Inn Phu Quoc เป็นโฮสเทลที่คุณแฟนเราจองห้องไพรเวทผ่านเว็บ hotelworld ไว้ 1 คืน ในราคา $40 (ประมาณ 1400 บาท) เริ่มมีประสบการณ์การจองโรงแรมกันแล้วว่าเราจะจองแค่คืนเดียวก่อนเพื่อดูว่าโอเคมั้ย พอไปถึงห้องก็งั้นๆพออยู่ได้แต่ถ้าเทียบกับราคาแล้วถือว่าแพงเกินไป เราเลยเปิดเว็บ <a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1798016&pcs=1&hl=th&city=17188" target="_ blank">AGODA</a> หาโรงแรมใหม่ทันทีค่ะ
+
+Phu Quoc is a hostel where you can book a private room on a hotelworld for 1 night for $ 40 (about 1400 baht). We already have one booking experience, and we'll book one night just to see if it's ok. I have to go to the room is enough, but if compared with the price is too expensive. So we launched the <a href="https://www.agoda.com/partners/partnersearch.aspx?cid=1798016&pcs=1&hl=en&city=17188" target="_ blank"> AGODA </a> site to find a new hotel. Immediately
 
 ![Image of little garden bungalow]({{ site.url }}/assets/img/19phuquoc/2.jpg)
 
