@@ -4,7 +4,7 @@ title: "Vietnam - Ho Chi Minh"
 img: 18hochiminh/cover.jpg # Add image post (optional)
 date: 2018-01-12 13:00:00 +0700
 description: ทริฟสั้นๆ 2 วัน 1 คืน ในโฮจิมิน เมืองหลวงของเวียดนาม
-tag: [Travel, Blogging, Hochiminh, Vietnam, โฮจิมินห์, เวียดนาม, english]
+tag: [Travel, Blogging, Hochiminh, Vietnam, โฮจิมินห์, เวียดนาม, English]
 ---
 
 <p class="thai">
