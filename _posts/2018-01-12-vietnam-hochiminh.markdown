@@ -83,5 +83,5 @@ The landmarks that we had the opportunity to visit were the Saigon Center Post O
 </ul>
 <h3 class="english hide">Total = $160</h3>
 
-<p class="thai">**รูปจากกล้องโทรศัพท์มือถือ moto g5s plus (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)</p>  
-<p class="english hide">Photos from moto g5s plus (no photoshop)</p>
+<p class="thai"> ** รูปจากกล้องโทรศัพท์มือถือ moto g5s plus (กล้องสด ไม่มีการปรับแต่งอะไรใดๆทั้งสิ้น)</p>  
+<p class="english hide"> Photos from moto g5s plus (no photoshop)</p>
