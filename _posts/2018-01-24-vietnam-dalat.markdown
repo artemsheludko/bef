@@ -166,6 +166,7 @@ The night markets here are full of local foods and restaurants. a lot of nuts an
 <p class="english hide">
 we would like to try a night club here. so we asked the staff at the hotel where the best club? The answer is the club called Rain, which is open from 10 pm onwards. The price is 700,000 vnd (about $3 + free 1 beer), but inside the price of the beer start with 95000  (what is more expensive than entrance fee) and a lot more expensive than outside. but the music is good and Laser engraving  we enjoyed it.
 and The next night we went to the club called V Club is in the basement. in our opinions it not that good if compared with the Rain club. the music was too loud that was not fun at all
+</p>
 
 
 
