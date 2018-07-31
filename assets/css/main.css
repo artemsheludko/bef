@@ -4282,6 +4282,10 @@ cite {
   vertical-align: middle;
 }
 
+.post .entry_content img {
+  max-width: 100%
+}
+
 .post header .post_description {
   position: absolute;
   left: 0;
@@ -4914,4 +4918,17 @@ cite {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+}
+
+.hide {
+    display: none
+}
+
+.center {
+    text-align: center
+}
+
+.pink {
+    color: #c0334a;
+    text-decoration: underline;
 }
