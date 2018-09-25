@@ -1,5 +1,5 @@
 logo: DataUab
-title: UAB Data Engineering 
+title: UAB Data Engineering
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -14,12 +14,12 @@ banner-title: Explore Data
 banner-desc: I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines. — C.Shannon
 
 # Author settings
-author-pic: face.jpg # your photo
-author-name: # your name
+author-pic: profile_pic.jpeg # your photo
+author-name: Diego Velazquez
 about-author: # about author
-email: your-email@domain.com # your email
-phone: (496)-169-6557 # your pnone number
-website: https://dwayne.example.com # you website
+email: diegovd0296@gmail.com # your email
+phone: # your pnone number
+website: # you website
 
 # Social link
 google_url:    # add url link
