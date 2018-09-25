@@ -10,8 +10,8 @@ url: "https://datauab.github.io/" # the base hostname & protocol for your site, 
 
 # Banner settings
 video: neural_net.mp4 # add banner video. Add your video file to the folder video
-banner-title: "Enjoy Data"
-banner-desc: "I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines". — C.Shannon
+banner-title: Explore Data
+banner-desc: I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines. — C.Shannon
 
 # Author settings
 author-pic: face.jpg # your photo
