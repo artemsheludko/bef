@@ -1,4 +1,4 @@
-logo: DataUab
+logo: DataUAB
 title: DataUAB
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -16,10 +16,10 @@ banner-desc: I visualize a time when we will be to robots what dogs are to human
 # Author settings
 author-pic: profile_pic.jpeg # your photo
 author-name: Diego Velazquez
-about-author: # about author
+about-author: Computer Science Student focusing on Deep Learning at Autonomous University of Barcelona 
 email: diegovd0296@gmail.com # your email
 phone: # your pnone number
-website: # you website
+website: dvd42.github.io 
 
 # Social link
 google_url: https://plus.google.com/u/0/102931106042715784832 # add url link

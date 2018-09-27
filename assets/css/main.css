@@ -4375,9 +4375,71 @@ cite {
   margin-right: 2rem;
 }
 
+
 .author .author_image img {
   width: 100%;
+
 }
+.author .advisor_image1 {
+    display: inline-block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 17%;
+    height: 17%;
+    margin-bottom: -5%;
+  margin-right: 30%;
+  
+  }
+
+.author .advisor_image1 img{
+   width: 100%;
+}
+
+.uab {
+
+  display: inline-block;
+  width: 22%;
+  height: 25%;
+  margin-bottom: 2%;
+  padding-left: 5%;
+}
+ 
+.uab img{
+ 
+    width: 80%;
+
+}
+.escola {
+
+     display: inline-block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 17%;
+    height: 90%;
+    margin-bottom: -4%;
+    margin-right: 10%;
+    float: right;
+}
+
+.escola img{
+ 
+    width: 100%;
+
+}
+
+.author .advisor_image2 {
+     display: inline-block;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    width: 17%;
+    height: 17%;
+    margin-bottom: -5%;
+}
+
+.author .advisor_image2 img{
+   width: 100%;
+}
+
 
 .author .author_info {
   padding-left: 8rem;
