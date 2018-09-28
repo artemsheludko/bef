@@ -4260,9 +4260,13 @@ cite {
 }
 
 .post_content {
-  width: 960px;
+  width: 100%;
   max-width: 90%;
   margin: 7rem auto 7rem;
+}
+.post_content img{
+ width: 100%;
+
 }
 
 .post {
