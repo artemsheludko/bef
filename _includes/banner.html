@@ -1,4 +1,4 @@
-
+<!--
 <section id="banner" data-vide-bg="{{site.baseurl}}/assets/video/{% if site.video %}{{ site.video }}{% endif %}" data-vide-options="posterType: none, autoplay: true, loop: true, muted: false, position: 50% 50%">
   <div class="wrapper">
     <div class="content">
@@ -7,3 +7,25 @@
     </div>
   </div>
 </section> <!-- End Section Banner -->
+
+<div style="height:500px;width:100%;">
+	<video autoplay muted loop id="myVideo" style="position: absolute;right: 0;z-index: -100;min-width: 100%;">
+	  <source src="{{site.baseurl}}/assets/video/{% if site.video %}{{ site.video }}{% endif %}" type="video/mp4">
+	</video>
+    <div class="content" style="
+    top:26%;
+    position: absolute;
+    text-align: center;
+    background: rgba(0, 0, 0, 0);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;">
+      <h1 class="title" style="font-size:4em;">{% if site.banner-title %}{{ site.banner-title }}{% else %}Enjoy Freedom{% endif %}</h1>
+      <h2 class="sub_title" style="    font-weight: 400;
+    font-size: 1.35rem;
+    margin: 0 auto 2rem auto;
+    line-height: 2.5rem;
+    font-style: italic;">{% if site.banner-desc %}{{ site.banner-desc }}{% else %}"A journey of a thousand miles begins with a single step". — Lao Tzu{% endif %}</h2>
+    </div>
+</div>

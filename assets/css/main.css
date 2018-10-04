@@ -16,6 +16,22 @@ html {
   /* 2 */
 }
 
+#myVideo {
+
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+
+
+
 /* Sections
    ========================================================================== */
 /**
@@ -57,6 +73,7 @@ figure,
 main {
   /* 1 */
   display: block;
+  background-color:#262626;
 }
 
 /**
@@ -4059,6 +4076,7 @@ cite {
   padding: 2rem 0;
   text-align: center;
   color: #ffffff;
+  background-color:#262626;
 }
 
 .newsletter .newsletter_title {
@@ -4126,6 +4144,7 @@ cite {
 .pagination {
   padding: 2rem 0 6rem;
   text-align: center;
+    background-color:#262626 !important;
 }
 
 .pagination a, .pagination span {
@@ -4144,10 +4163,12 @@ cite {
 
 .pagination .active {
   border-bottom: 1px solid #6e6e6e;
+    background-color:#262626 !important;
 }
 
 .pagination .active:hover {
   color: #6e6e6e;
+    background-color:#262626 !important;
 }
 
 .top {
@@ -4757,12 +4778,12 @@ cite {
 .post_content,
 .about,
 .contact {
-  -webkit-animation-duration: 0.7s;
+ /* -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
-          animation-name: fadeInDown;
+          animation-name: fadeInDown;*/
 }
 
 #banner,
@@ -4775,8 +4796,8 @@ cite {
 .post_content,
 .about,
 .contact {
-  -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+/*  -webkit-animation-delay: 0.75s;
+          animation-delay: 0.75s;*/
 }
 
 @-webkit-keyframes fadeInDown {
@@ -4836,15 +4857,19 @@ cite {
     font-size: 1.35rem;
     margin: 0 0 0.3rem 0;
   }
+   nav.pagination{
+    background-color:#262626 !important;
+  }
   .pagination {
     padding: 2rem 0 6rem;
+    background-color:#262626 !important;
   }
   .pagination a {
     padding: 0.5rem 0.8rem;
     margin-left: 1rem;
   }
   .newsletter {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
   .newsletter .newsletter_title {
     font-size: 1.75rem;
