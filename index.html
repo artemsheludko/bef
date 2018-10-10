@@ -6,12 +6,14 @@ layout: main
   <div class="chapter">
     <a href="{{post.url | prepend: site.baseurl}}">
       {% if post.img %}
-      <img src={{ "/assets/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
+        <img src={{ "/assets/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
       {% endif %}
     </a>
-    <div class="chapter_inner">
-      <p class="chapter_number">{{post.date | date: '%Y, %b %d'}}</p>
-      <h3 class="chapter_title">{{post.title}}</h3>
-    </div>
+    <a href="{{post.url | prepend: site.baseurl}}">
+      <div class="chapter_inner">
+        <p class="chapter_number">{{post.date | date: '%Y, %b %d'}}</p>
+        <h3 class="chapter_title">{{post.title}}</h3>
+      </div>
+    </a>
   </div>
 {% endfor %}
