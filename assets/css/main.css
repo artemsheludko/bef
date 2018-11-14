@@ -227,7 +227,8 @@ audio:not([controls]) {
  * Remove the border on images inside links in IE 10-.
  */
 img {
-  border-style: none;
+    margin: 10px;
+    border-style: none;
 }
 
 /**
@@ -3872,7 +3873,7 @@ body {
 }
 
 p {
-  font-size: 1.1rem;
+  
   line-height: 1.75rem;
   margin: 0 0 1.75rem;
   color: #525c65;
@@ -4023,7 +4024,10 @@ cite {
   transition: -webkit-transform 0.4s;
   transition: transform 0.4s;
   transition: transform 0.4s, -webkit-transform 0.4s;
-}
+  max-height:200px;
+  max-width:400px;
+  }
+
 
 .chapters .chapter a {
   text-decoration: none;
@@ -4031,7 +4035,8 @@ cite {
 
 .chapters .chapter img {
   width: 100%;
-  vertical-align: middle;
+ height:100%;
+ vertical-align: middle;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -5005,4 +5010,10 @@ cite {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+}
+.div_formula {
+
+    margin: 10px;
+}
+.chapter img {
 }

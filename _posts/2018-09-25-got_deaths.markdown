@@ -2,9 +2,9 @@
 layout: post
 title: "Game Of Thrones: Predicting Characters Deaths"
 img: got.jpg 
-date: 2018-09-25 
+date: 2018-09-25
 description: An analysis of Game of Thrones data and the performance of different models on a classification task. 
-tag: [Data, Data Analysis, Machine Learning, Deep Learning, Game Of Thrones]
+tag: [Data, Data Analysis, Machine Learning, Game Of Thrones]
 ---
 Lorem ipsum dolor sit amet consectetur adipiscing, elit erat nascetur vitae nibh etiam habitasse, ligula blandit eleifend pretium aliquam. Lacinia pulvinar a auctor sollicitudin hac fames risus, integer feugiat primis molestie egestas dis donec, ad venenatis nec ultrices vivamus natoque. Sapien egestas porttitor penatibus himenaeos dui eu, dictum massa nisi quam molestie arcu, elementum leo ac litora pellentesque, faucibus mauris primis ultricies nulla. Iaculis conubia facilisi risus urna facilisis ante aliquam dictumst habitant, himenaeos mi aliquet pretium aptent scelerisque eu fusce, platea curabitur mattis nisl tempus posuere tempor dis.
 
