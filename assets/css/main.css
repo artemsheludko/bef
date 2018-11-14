@@ -227,8 +227,7 @@ audio:not([controls]) {
  * Remove the border on images inside links in IE 10-.
  */
 img {
-    margin: 10px;
-    border-style: none;
+border-style: none;
 }
 
 /**
@@ -4298,7 +4297,8 @@ cite {
 .post {
   background-color: #ffffff;
   margin-bottom: 1.5rem;
-}
+  width: 100%;
+  }
 
 .post header {
   position: relative;

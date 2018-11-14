@@ -32,7 +32,9 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
-  margin: 0;
+    margin: 0;
+    background-color: rgb(38, 38, 38) !important;
+
 }
 article,
 aside,
@@ -1467,7 +1469,7 @@ dd {
 @media (min-width: 541px) {
   .dl-horizontal dt {
     float: left;
-    width: 160px;
+    width: 100%;
     clear: left;
     text-align: right;
     overflow: hidden;
@@ -1600,17 +1602,17 @@ pre code {
 }
 @media (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 100px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 940px;
+    width: 100%;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1140px;
+      width: 100%;
   }
 }
 .container-fluid {
@@ -10499,6 +10501,7 @@ div.cell.selected.jupyter-soft-selected:before {
   }
 }
 .prompt {
+    display:none;
   /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
   min-width: 14ex;
   /* This padding is tuned to match the padding on the CodeMirror editor. */
@@ -10963,7 +10966,7 @@ div.output_area .rendered_html img {
 }
 div.output_area img,
 div.output_area svg {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 div.output_area img.unconfined,
@@ -11287,7 +11290,7 @@ div.output_unrecognized a:hover {
 }
 .rendered_html img,
 .rendered_html svg {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 .rendered_html img.unconfined,
@@ -11442,8 +11445,6 @@ div#notebook {
     padding: 15px;
     background-color: #fff;
     min-height: 0;
-    -webkit-box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
-    box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
 @media print {
@@ -13124,7 +13125,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Convolutional-Neural-Networks">Convolutional Neural Networks<a class="anchor-link" href="#Convolutional-Neural-Networks">&#182;</a></h3><p>Neural Networks are based on a collection of connected units or nodes called "neurons", , "neurons", which try to simulate, in a very simplistic manner, the way neurons interact in an animal's brain.<br>
+<h3 id="Convolutional-Neural-Networks">Convolutional Neural Networks<a class="anchor-link" href="#Convolutional-Neural-Networks">&#182;</a></h3><p>Neural Networks are based on a collection of connected units or nodes called "neurons", which try to simulate, in a very simplistic manner, the way neurons interact in an animal's brain.<br>
 Each connection, like the synapses in a biological brain, can transmit a signal from one artificial neuron to another. An artificial neuron that receives a signal can process it and then signal additional artificial neurons connected to it.</p>
 <p>CNNs are a kind of neural network that attempts to look at images the way the humans do, extract information from them and pass it to the artificial neurons tasked with handling this information in the fully connected layers.</p>
 <p><img src="../post_images/mnist/cnn.jpeg" alt=""></p>
