@@ -24,9 +24,16 @@ permalink: /about/
           <h2 class="author_title">{% if site.author-name %}{{site.author-name}}{% else %}Dwayne Newman{% endif %}</h2>
           <p class="author_subtitle">Computer Science student focused on Deep Learning at Autonomous University of Barcelona</p>
           <h2 class="author_title"> Advisors </h2>
-        <div class="advisor_image1">
-          <img src=../assets/img/jordi.jpg alt="Jordi Poal">
-          <p class="author_subtitle"> Jordi Gonzalez </p>
+	<div class="flex-container">
+<div></div>        
+	<div class="advisor_image1">
+          <div>
+		<img src=../assets/img/jordi.jpg alt="Jordi Poal">
+	  </div>
+	  <div>
+	         <p class="author_subtitle"> Jordi Gonzalez</p>
+          </div>
+
         </div>
         <div class="advisor_image2">
           <img src=../assets/img/pau.jpeg alt="Pau Rodriguez">
@@ -34,7 +41,7 @@ permalink: /about/
         </div>
         </div>
       </div>
-
+	</div>
       <div class="about_social">
         {% include social_footer.html %}
       </div>

@@ -4457,8 +4457,18 @@ cite {
 
 }
 
+.flex-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.flex-container > div {
+  
+}
+
 .author .advisor_image2 {
-     display: inline-block;
+
     -webkit-border-radius: 50%;
     border-radius: 50%;
     width: 17%;
