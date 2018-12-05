@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Game Of Thrones: Predicting Characters Deaths"
-img: got.jpg 
+img: got_cover.jpg 
 date: 2018-09-25
 description: An analysis of Game of Thrones data and the performance of different models on a classification task. 
 tag: [Data, Data Analysis, Machine Learning, Game Of Thrones]
@@ -13728,7 +13728,7 @@ We will fill the NANs that we can with the <strong>mean value</strong> of the co
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dropping-Columns">Dropping Columns<a class="anchor-link" href="#Dropping-Columns">&#182;</a></h3><p>In this dataset that are some columns that make the prediction of a character's death unnecessary. For example: <strong>DateoFdeath</strong> already tells you that that character died (unless it's a NAN), <strong>plod</strong> tells you the probability that a character is dead, and so on.</p>
 <p>We will the drop columns that outright tells you if a character is dead or no, otherwise we would be cheating.</p>
-<p>There are also some columns that are useless for our task, like <strong>S.No</strong> which is basically and incremental identifier for each sample, and <strong>name</strong> which is the name of the character. We will drop these columns as well.</p>
+<p>There are also some columns that are useless for our task, like <strong>S.No</strong> which is basically an incremental identifier for each sample, and <strong>name</strong> which is the name of the character. We will drop these columns as well.</p>
 
 </div>
 </div>
