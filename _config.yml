@@ -1,5 +1,5 @@
-logo: DataUAB
-title: DataUAB
+logo: Data UAB
+title: Data UAB
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -10,27 +10,27 @@ url: "https://datauab.github.io" # the base hostname & protocol for your site, e
 
 # Banner settings
 video: neural_net1.mp4 # add banner video. Add your video file to the folder video
-banner-title: Explore Data
+banner-title: Engineering Data
 banner-desc: I visualize a time when we will be to robots what dogs are to humans, and I’m rooting for the machines. — C.Shannon
 
 # Author settings
 author-pic: profile_pic.jpeg # your photo
 author-name: Diego Velazquez
-about-author: Computer Science Student focused on Deep Learning at Autonomous University of Barcelona 
+about-author: Computer Science Student focused on Deep Learning at Universitat Autònoma de Barcelona (UAB) 
 email: diegovd0296@gmail.com # your email
 phone: # your pnone number
 website: dvd42.github.io 
 
 # Social link
-google_url: https://plus.google.com/u/0/102931106042715784832 # add url link
-twitter_url:  https://twitter.com/Mr_PO96 # add url link
-facebook_url: # add url link
+#google_url: https://plus.google.com/u/0/102931106042715784832 # add url link
+twitter_url:  https://twitter.com/enginyeriauab #add url link
+facebook_url: https://www.facebook.com/uabbarcelona/ # add url link
 
 # Newsletter
 mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
 
 # Disqus
-discus_identifier: mr-brown # add your discus identifier
+discus_identifier: # add your discus identifier
 
 # Tracker
 analytics:

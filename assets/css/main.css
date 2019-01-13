@@ -119,6 +119,7 @@ a {
   /* 1 */
   -webkit-text-decoration-skip: objects;
   /* 2 */
+  color: inherit;
 }
 
 /**
@@ -3947,6 +3948,14 @@ cite {
   clear: both;
 }
 
+.logo-links img {
+
+    width: 75px;
+    height: 50px;
+    margin: 5px;
+
+}
+
 .main_header {
   padding: 2rem;
   display: -webkit-box;
@@ -3963,11 +3972,12 @@ cite {
           align-items: center;
   background-color: #1c1c1c;
   z-index: 1;
+  text-align: center;
 }
 
 .main_header .logo {
   color: #ffffff;
-  margin: 0;
+  margin: auto;
   font-size: 2rem;
   text-decoration: none;
   font-weight: 700;
@@ -4221,6 +4231,7 @@ cite {
 
 .main_footer {
   background-color: #1c1c1c;
+  text-align: center;
 }
 
 .social_footer {
