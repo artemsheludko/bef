@@ -27,7 +27,7 @@ twitter_url:  https://twitter.com/enginyeriauab #add url link
 facebook_url: https://www.facebook.com/uabbarcelona/ # add url link
 
 # Newsletter
-mailchimp: "https://uab.us20.list-manage.com/subscribe/post?u=547f0d18d62f5de25b08f45ff&amp;id=d88eb1fc5e" # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+mailchimp: "uab.us20.list-manage.com/subscribe/post?u=547f0d18d62f5de25b08f45ff&amp;id=d88eb1fc5e" # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
 
 # Disqus
 discus_identifier: # add your discus identifier
