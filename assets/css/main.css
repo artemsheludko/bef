@@ -29,7 +29,16 @@ html {
     width: 100%;
     padding: 20px;
 }
-
+.userbox{	
+	margin: 0 auto;	
+}
+.multipleusers{
+	display: flex;	
+}
+.user-title{
+	width: 100%;
+	text-align: center;
+}
 
 
 /* Sections
@@ -4477,6 +4486,8 @@ cite {
 .flex-container > div {
   
 }
+
+
 
 .author .advisor_image2 {
 
