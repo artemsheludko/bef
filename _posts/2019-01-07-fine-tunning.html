@@ -13131,7 +13131,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>This post provides an introduction to fine-tunning techniques that are taught in the Machine Learning subject of the intensive course in computing of the UAB's Bachelor's Degree in Computer Engineering. In it, we will learn how to fine-tune a <strong>Convolutional Neural Network (CNN)</strong> for a vision-related classification task. The code for this blog post can be found <a href="https://github.com/dvd42/fine-tunning-with-pytorch">here</a>.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>This post provides an introduction to fine-tunning techniques that are taught in the Machine Learning subject of the intensive course in computing of the UAB's Bachelor's Degree in Computer Engineering. In it, we will learn how to fine-tune a <strong>Convolutional Neural Network (CNN)</strong> for a vision-related classification task. The code for this blog post can be found <a href="https://github.com/DataUAB/fine-tunning-with-pytorch">here</a>.</p>
 
 </div>
 </div>
@@ -13163,9 +13163,9 @@ div#notebook {
 <li><strong>Freeze the first layers</strong> of the network <strong>(no backprop)</strong> and train the rest of the network with a <strong>smaller learning rate</strong>. Since the first convolutional layers always <strong>focus on edges and corners</strong> it is very likely that we don't have to change their weights because no matter what your image has in it, it will always have corners and edges. The <strong>newyly added layer</strong> should be trained with a normal learning rate.  </li>
 </ol>
 <ol>
-<li>Re-train the <strong>entire network</strong> with high learning rate. The previous approaches cna work when the domain of the new task is <strong>similar</strong> to the one with which the network was pre-trained. But when the domain of the new task <strong>differs</strong> a lot from the original one, the network must <strong>re-learn a lot</strong>, and so <strong>more agressive</strong> parameter updates are required.</li>
+<li>Re-train the <strong>entire network</strong> with high learning rate. The previous approaches cna work when the domain of the new task is <strong>similar</strong> to the one with which the network was pre-trained. But when the domain of the new task <strong>differs</strong> a lot from the original one, the network must <strong>re-learn a lot</strong>, and so <strong>more aggressive</strong> parameter updates are required.</li>
 </ol>
-<p><img src="fine-tunning_images/weights.png" alt="weights"></p>
+<p><img src="../post_images/fine-tunning_images/weights.png" alt="weights"></p>
 
 </div>
 </div>
