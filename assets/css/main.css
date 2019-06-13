@@ -16,8 +16,18 @@ html {
   /* 2 */
 }
 
-#myVideo {
+.logo-links{
+  background-color: white;
+}
 
+.logo-links img {
+  width: 8%;
+  height: 8%;
+  margin:1%;
+}
+
+.logo-links img:hover{
+  opacity: 0.5;
 }
 
 /* Add some content at the bottom of the video/page */
@@ -3955,14 +3965,6 @@ cite {
 
 .cf::after {
   clear: both;
-}
-
-.logo-links img {
-
-    width: 250px;
-    height: 200px;
-    margin: 5px;
-
 }
 
 .main_header {
