@@ -5,7 +5,7 @@ img: speed_dating.jpg
 date: 2019-06-25
 description: Analysing an Speed Dating experiment and predicting if a person will receive a call after the date or not.
 
-author-pic: laura.jpeg 
+author-pic: laura.jpg
 author-name: Laura Planas Simón
 about-author: Computer Science Student at Universitat Autònoma de Barcelona (UAB)
 email: lplanas97@gmail.com 
@@ -14,16 +14,12 @@ website: https://github.com/LauraPlanas
 tag: [Data Analysis, Machine Learning, Speed Dating]
 ---
 
-<!DOCTYPE html>
-<!-- saved from url=(0077)https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title>speed_dating</title>
 
-<script src="./speed_dating_files/require.min.js.descarga"></script>
-<script src="./speed_dating_files/jquery.min.js.descarga"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
     /*!
@@ -44,6 +40,7 @@ html {
 }
 body {
   margin: 0;
+  background-image: url(/assets/img/speed-dating-background.jpg);
 }
 article,
 aside,
@@ -10971,7 +10968,7 @@ div.output_area .rendered_html img {
 }
 div.output_area img,
 div.output_area svg {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 div.output_area img.unconfined,
@@ -11295,7 +11292,7 @@ div.output_unrecognized a:hover {
 }
 .rendered_html img,
 .rendered_html svg {
-  max-width: 100%;
+  max-width: 50%;
   height: auto;
 }
 .rendered_html img.unconfined,
@@ -13101,7 +13098,7 @@ div#notebook {
 </style>
 
 <!-- Custom stylesheet, it must be in the same directory as the html file -->
-<link rel="stylesheet" href="./speed_dating_files/custom.css">
+<link rel="stylesheet" href="../post_images/speed_dating_files/custom.css">
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
@@ -13260,7 +13257,7 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="How-to-get-a-second-date">How to get a second date<a class="anchor-link" href="https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html#How-to-get-a-second-date">¶</a></h1><h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html#1.-Introduction">¶</a></h2><p>Are you curious about knowing what influences love at first sight? Or about knowing what the key attributes to get a call are? In this article we will be covering a problem that will help us to discover what the attributes that make us more attractive to the eyes of other people are. In this case we will be using data extracted from a speed dating experiment, but the conclusions to which we will arrive could be extrapolated to any life situation where the first impressions are crucial, like for example job interviews.</p>
+<h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html#1.-Introduction">¶</a></h2><p>Are you curious about knowing what influences love at first sight? Or about knowing what the key attributes to get a call are? In this article we will be covering a problem that will help us to discover what the attributes that make us more attractive to the eyes of other people are. In this case we will be using data extracted from a speed dating experiment, but the conclusions to which we will arrive could be extrapolated to any life situation where the first impressions are crucial, like for example job interviews.</p>
 <p>As an outline of this article, the following topics will be covered:</p>
 <ul>
 <li>Data cleaning and preparation</li>
@@ -13703,10 +13700,10 @@ Length: 88, dtype: object
 <p>All the plots will be saved into a folder named histograms.</p>
 <p>Now that we have all our histograms, let’s find some interesting attributes and check their distributions.</p>
 <p>For example, the first thing that we can check is if our Y variable (call) is balanced. With the following histogram we can see that there is approximately the same number of participants who received a call as participants who didn’t receive any call.</p>
-<p><img src="./speed_dating_files/call.png" alt=""></p>
+<p><img src="../post_images/speed_dating_files/call.png" alt=""></p>
 <p>The next thing we can check are attributes that can help us to better understand how the experiment was performed. For instance, we will check the age and gender distribution of the data. It can easily be seen with the histograms that the age of the participants is within a range of 20 to 35, and that there are more females (0) than males (1) participating in the experiment.</p>
-<p><img src="./speed_dating_files/age.png" alt="">
-<img src="./speed_dating_files/gender.png" alt=""></p>
+<p><img src="../post_images/speed_dating_files/age.png" alt="">
+<img src="../post_images/speed_dating_files/gender.png" alt=""></p>
 <p>In the data we also have the six attributes that we mentioned in the introduction:</p>
 <ul>
 <li>Attractiveness</li>
@@ -13787,7 +13784,7 @@ Length: 88, dtype: object
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./speed_dating_files/attr_heatmap.png" alt=""></p>
+<p><img src="../post_images/speed_dating_files/attr_heatmap.png" alt=""></p>
 <p>We will also plot the same correlation heatmap but with the personal interests and hobbies:</p>
 
 </div>
@@ -13813,7 +13810,7 @@ Length: 88, dtype: object
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="./speed_dating_files/interests_heatmap.png" alt=""></p>
+<p><img src="../post_images/speed_dating_files/interests_heatmap.png" alt="" style="max-width:100%"></p>
 <p>If we focus on the correlations of all the analysed variables with the fact of receiving a call, we can obtain a conclusion. At the moment of the truth, none of the attributes or the personal likes are really correlated with the fact of receiving a call after the date.</p>
 <p>Nevertheless, in these correlation maps we can observe that the Attractiveness is highly correlated with the Fun, and the same thing happens with the Intelligence and the Ambition. Also, some of the personal interests have a high value of correlation, like for example going to museums with liking art or going to concerts with liking to listen to music.</p>
 
@@ -14066,7 +14063,7 @@ Length: 88, dtype: object
 <h2 id="5.-Evaluation">5. Evaluation<a class="anchor-link" href="https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html#5.-Evaluation">¶</a></h2><h3 id="5.1.-Confusion-Matrix">5.1. Confusion Matrix<a class="anchor-link" href="https://cocalc.com/e3eb6490-3215-476b-8d65-76755059277d/raw/speed_dating.html#5.1.-Confusion-Matrix">¶</a></h3><p>When we are evaluating a classification model, the most common thing to do is a confusion matrix. Each row of this matrix represents the instances of the predicted class, while each column represents the instances of the actual class.</p>
 <p>In a binary classification problem, this matrix has 2 rows and 2 columns and reports the number of false positives, false negatives, true positives and true negatives.</p>
 <p>Since accuracy is not a reliable metric for the real performance of a classification, it is important to know how to calculate and use a Confusion Matrix.</p>
-<p><img src="./speed_dating_files/1_Z54JgbS4DUwWSknhDCvNTQ.png" alt="Confusion matrix"></p>
+<p><img src="../post_images/speed_dating_files/1_Z54JgbS4DUwWSknhDCvNTQ.png" alt="Confusion matrix"></p>
 
 </div>
 </div>
@@ -14163,7 +14160,7 @@ TPR = Sensitivity = \frac{TP}{P} = \frac{TruePositive}{Positive}
 \end{equation}</script><span class="MathJax_Preview" style="color: inherit; display: none;"></span><div class="MathJax_Display" style="text-align: center;"><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style="text-align: center; position: relative;" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;/mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mi&gt;F&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;l&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;P&lt;/mi&gt;&lt;mi&gt;o&lt;/mi&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;g&lt;/mi&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;v&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;S&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;f&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;c&lt;/mi&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;/math&gt;" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-48" style="width: 25.539em; display: inline-block;"><span style="display: inline-block; position: relative; width: 21.253em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.658em, 1021.25em, 3.277em, -999.997em); top: -2.199em; left: 0em;"><span class="mrow" id="MathJax-Span-49"><span class="mi" id="MathJax-Span-50" style="font-family: MathJax_Math-italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span><span class="mi" id="MathJax-Span-51" style="font-family: MathJax_Math-italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span><span class="mi" id="MathJax-Span-52" style="font-family: MathJax_Math-italic;">R</span><span class="mo" id="MathJax-Span-53" style="font-family: MathJax_Main; padding-left: 0.301em;">=</span><span class="mfrac" id="MathJax-Span-54" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 1.61em; height: 0px; margin-right: 0.122em; margin-left: 0.122em;"><span style="position: absolute; clip: rect(3.158em, 1001.49em, 4.17em, -999.997em); top: -4.64em; left: 50%; margin-left: -0.771em;"><span class="mrow" id="MathJax-Span-55"><span class="mi" id="MathJax-Span-56" style="font-family: MathJax_Math-italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span><span class="mi" id="MathJax-Span-57" style="font-family: MathJax_Math-italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(3.158em, 1000.9em, 4.17em, -999.997em); top: -3.271em; left: 50%; margin-left: -0.414em;"><span class="mi" id="MathJax-Span-58" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1001.61em, 1.253em, -999.997em); top: -1.307em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 1.61em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.074em;"></span></span></span></span><span class="mo" id="MathJax-Span-59" style="font-family: MathJax_Main; padding-left: 0.301em;">=</span><span class="mfrac" id="MathJax-Span-60" style="padding-left: 0.301em;"><span style="display: inline-block; position: relative; width: 6.313em; height: 0px; margin-right: 0.122em; margin-left: 0.122em;"><span style="position: absolute; clip: rect(3.098em, 1006.19em, 4.17em, -999.997em); top: -4.64em; left: 50%; margin-left: -3.092em;"><span class="mrow" id="MathJax-Span-61"><span class="mi" id="MathJax-Span-62" style="font-family: MathJax_Math-italic;">F<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span><span class="mi" id="MathJax-Span-63" style="font-family: MathJax_Math-italic;">a</span><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math-italic;">l</span><span class="mi" id="MathJax-Span-65" style="font-family: MathJax_Math-italic;">s</span><span class="mi" id="MathJax-Span-66" style="font-family: MathJax_Math-italic;">e</span><span class="mi" id="MathJax-Span-67" style="font-family: MathJax_Math-italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.122em;"></span></span><span class="mi" id="MathJax-Span-68" style="font-family: MathJax_Math-italic;">o</span><span class="mi" id="MathJax-Span-69" style="font-family: MathJax_Math-italic;">s</span><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-71" style="font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-72" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-73" style="font-family: MathJax_Math-italic;">v</span><span class="mi" id="MathJax-Span-74" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(3.158em, 1003.99em, 4.348em, -999.997em); top: -3.271em; left: 50%; margin-left: -2.021em;"><span class="mrow" id="MathJax-Span-75"><span class="mi" id="MathJax-Span-76" style="font-family: MathJax_Math-italic;">N<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mi" id="MathJax-Span-77" style="font-family: MathJax_Math-italic;">e</span><span class="mi" id="MathJax-Span-78" style="font-family: MathJax_Math-italic;">g<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-79" style="font-family: MathJax_Math-italic;">a</span><span class="mi" id="MathJax-Span-80" style="font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-81" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-82" style="font-family: MathJax_Math-italic;">v</span><span class="mi" id="MathJax-Span-83" style="font-family: MathJax_Math-italic;">e</span></span><span style="display: inline-block; width: 0px; height: 3.991em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1006.31em, 1.253em, -999.997em); top: -1.307em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 6.313em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.074em;"></span></span></span></span><span class="mo" id="MathJax-Span-84" style="font-family: MathJax_Main; padding-left: 0.301em;">=</span><span class="mn" id="MathJax-Span-85" style="font-family: MathJax_Main; padding-left: 0.301em;">1</span><span class="mo" id="MathJax-Span-86" style="font-family: MathJax_Main; padding-left: 0.241em;">−</span><span class="mi" id="MathJax-Span-87" style="font-family: MathJax_Math-italic; padding-left: 0.241em;">S<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mi" id="MathJax-Span-88" style="font-family: MathJax_Math-italic;">p</span><span class="mi" id="MathJax-Span-89" style="font-family: MathJax_Math-italic;">e</span><span class="mi" id="MathJax-Span-90" style="font-family: MathJax_Math-italic;">c</span><span class="mi" id="MathJax-Span-91" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-92" style="font-family: MathJax_Math-italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.063em;"></span></span><span class="mi" id="MathJax-Span-93" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-94" style="font-family: MathJax_Math-italic;">c</span><span class="mi" id="MathJax-Span-95" style="font-family: MathJax_Math-italic;">i</span><span class="mi" id="MathJax-Span-96" style="font-family: MathJax_Math-italic;">t</span><span class="mi" id="MathJax-Span-97" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.205em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.139em; border-left: 0px solid; width: 0px; height: 2.861em;"></span></span></nobr><span class="MJX_Assistive_MathML MJX_Assistive_MathML_Block" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mi>F</mi><mi>P</mi><mi>R</mi><mo>=</mo><mfrac><mrow><mi>F</mi><mi>P</mi></mrow><mi>N</mi></mfrac><mo>=</mo><mfrac><mrow><mi>F</mi><mi>a</mi><mi>l</mi><mi>s</mi><mi>e</mi><mi>P</mi><mi>o</mi><mi>s</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>e</mi></mrow><mrow><mi>N</mi><mi>e</mi><mi>g</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>v</mi><mi>e</mi></mrow></mfrac><mo>=</mo><mn>1</mn><mo>−</mo><mi>S</mi><mi>p</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>f</mi><mi>i</mi><mi>c</mi><mi>i</mi><mi>t</mi><mi>y</mi></math></span></span></div><script type="math/tex; mode=display" id="MathJax-Element-2">\begin{equation}
 FPR = \frac{FP}{N} = \frac{FalsePositive}{Negative} = 1 - Specificity
 \end{equation}</script><p>The hypothetical perfect classifier would be the one with a sensitivity and a specificity of 1 (TPR = 1 and FPR = 0). (the red line). In the following image we can observe the ideal ROC curve, a good ROC curve, and the worst ROC curve that can be obtained.</p>
-<p><img src="./speed_dating_files/rocs.PNG" alt="ROC Curve Examples"></p>
+<p><img src="../post_images/speed_dating_files/rocs.PNG" alt="ROC Curve Examples" style="max-width: 75%"></p>
 <p>The Area Under the Curve (AUC)  tells how much the model is capable of distinguishing between classes. Basically, this value  says how close our ROC curve is to the ideal ROC curve. The closer this area is to 1 the better. On the other hand, if this value is closer to 0.5 or less it means that the model is not performing well.</p>
 
 </div>
