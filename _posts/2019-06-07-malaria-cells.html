@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Predicting Flight Delays"
-img: flight-delays.jpg
-date: 2019-06-27
-description: "Regression to find those in need"
+title: "Detecting Malaria Cells"
+img: malaria-cells.jpg
+date: 2019-06-07
+description: "Detecting Malaria Cells through images"
 
 author-pic: jaume.jpeg
 author-name: Jaume Estany
@@ -11,8 +11,9 @@ about-author: Computer Science Student at Universitat Autònoma de Barcelona (UA
 email: jaume.estany.gonzalez@gmail.com
 # website: aaa
 
-tag: [Machine Learning, Data Analysis, Classification, Python, sklearn]
+tag: [Machine Learning, Deep Learning, Data Analysis, Classification, Python, pyTorch]
 ---
+
 <html>
 
 <head>
@@ -47,7 +48,7 @@ tag: [Machine Learning, Data Analysis, Classification, Python, sklearn]
             margin: 0;
             background-color: rgb(38, 38, 38) !important;
             background-size: cover;
-            background-image: url(/assets/img/bg-flight-delays.jpg);
+            background-image: url(/assets/img/bg-malaria-cells.jpg);
         }
 
         article,
@@ -16497,17 +16498,13 @@ Adapted from GitHub theme
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
                         <h3 id="Introduction:">Introduction:<a class="anchor-link" href="#Introduction:">&#182;</a></h3>
-                        <p>This blog will provide an example of how to properly solve a problem where we need to train a
-                            classifier over some data distribution.</p>
+                        <p>This blog will provide an example of how to properly solve a problem of deep learning.</p>
                         <p>In this case I will be using <a
-                                href="https://www.kaggle.com/usdot/flight-delays#flights.csv">this</a> dataset from <a
-                                href="https://www.kaggle.com">kaggle</a>.
-                            This dataset contains data about different flights that happened in 2015, including data
-                            about its delay and if it was cancelled.</p>
-                        <p>So, the purpose for this dataset is to determine the flights that were or were not heavily
-                            delayed (30min limit).</p>
-                        <p>For this project, I've decided I will use a logistic regressor, whose training code I will be
-                            explaining now.</p>
+                                href="https://www.kaggle.com/iarunava/cell-images-for-detecting-malaria">this</a>
+                            dataset from <a href="https://www.kaggle.com">kaggle</a>.
+                            This dataset contains images of human cells. There are two classes: the healthy ones and the
+                            (malaria) infected ones.</p>
+                        <p>So, the purpose for this dataset is to detect whether a cell is healthy or infected.</p>
 
                     </div>
                 </div>
@@ -16519,190 +16516,7 @@ Adapted from GitHub theme
                     <div class="text_cell_render border-box-sizing rendered_html">
                         <h3 id="Dependences">Dependences<a class="anchor-link" href="#Dependences">&#182;</a></h3>
                         <ul>
-                            <li>pandas: vector and matrix operations</li>
-                            <li>numpy: extra functionality for pandas</li>
-                            <li>sklearn: to preprocess and split our data and train ML models</li>
-                            <li>matplotlib: using pyplot for pretty-plotting our results</li>
-                            <li>seaborn: also fancy plotting</li>
-                        </ul>
-
-                    </div>
-                </div>
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">sklearn</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing text_cell rendered">
-                <div class="prompt input_prompt">
-                </div>
-                <div class="inner_cell">
-                    <div class="text_cell_render border-box-sizing rendered_html">
-                        <h5 id="Missing-Values">Missing Values<a class="anchor-link" href="#Missing-Values">&#182;</a>
-                        </h5>
-                        <p>Now we will check the missing values of the dataset to detect unusable features and when and
-                            how are the rest of the missing values meaningful.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="c1"># read and get nans by columns</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="sa">r</span><span class="s1">&#39;data\flights.csv&#39;</span><span class="p">))</span>
-<span class="n">sums</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-
-<span class="n">nan_count_limit</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># crate tuples (nan_sum, column_name), filter it and sort it</span>
-<span class="n">non_zero_pairs</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">pair</span> <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">sums</span><span class="p">,</span> <span class="n">dataset</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span> <span class="k">if</span> <span class="n">pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">nan_count_limit</span><span class="p">])</span>
-<span class="n">non_zero_pairs</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">dataset</span><span class="p">),</span> <span class="s1">&#39;TOTAL&#39;</span><span class="p">))</span>
-
-<span class="c1"># split tuples into separate lists</span>
-<span class="n">non_zero_sums</span><span class="p">,</span> <span class="n">non_zero_labels</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">non_zero_pairs</span><span class="p">)</span>
-<span class="n">nans_range</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">non_zero_sums</span><span class="p">)))</span>
-
-<span class="c1"># print info</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">non_zero_sum</span><span class="p">,</span> <span class="n">non_zero_label</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">non_zero_pairs</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">, </span><span class="si">{}</span><span class="s1">: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">non_zero_label</span><span class="p">,</span> <span class="n">non_zero_sum</span><span class="p">))</span>
-
-<span class="c1"># plot info</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">nans_range</span><span class="p">)</span>
-<span class="c1"># ax.set_xticklabels(non_zero_labels)    # set column names in X ticks</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">nans_range</span><span class="p">,</span> <span class="n">non_zero_sums</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing text_cell rendered">
-                <div class="prompt input_prompt">
-                </div>
-                <div class="inner_cell">
-                    <div class="text_cell_render border-box-sizing rendered_html">
-                        <p><img src="/post_images/flight-delays/nans-limited-0.png" style="width: 60%;"></p>
-                        <p>We've had to hid the feature names because they would overlap. However, all data has been
-                            printed.
-                            Here we can see that some columns have zero or few missing values and some columns that have
-                            a lot of them.
-                            We will have to accept the columns with few missing values because the column
-                            "ARRIVAL_DELAY", which is the one
-                            we've been using to generate the classification class, is one of those.</p>
-                        <p>If we raise the "nan_count_limit" and uncomment the last line we can see the next image.</p>
-                        <p><img src="/post_images/flight-delays/nans-limited-1000000.png" style="width: 60%;"></p>
-                        <p>It's absolutely necessary to remove the columns that last.
-                            These columns add data about where the delay comes from, but the samples that add this
-                            information is so low, that they become unusable.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="cell border-box-sizing text_cell rendered">
-                <div class="prompt input_prompt">
-                </div>
-                <div class="inner_cell">
-                    <div class="text_cell_render border-box-sizing rendered_html">
-                        <h4 id="Dataset-Transformation">Dataset Transformation<a class="anchor-link"
-                                href="#Dataset-Transformation">&#182;</a></h4>
-                        <p>Here we are applying all the necessary transformations to our dataset in order to make it
-                            usable.</p>
-                        <p>Firstly we will generate the column that is our target.</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;data\flights.csv&#39;</span><span class="p">)</span>
-<span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;DIDNT_DELAY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;ARRIVAL_DELAY&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing text_cell rendered">
-                <div class="prompt input_prompt">
-                </div>
-                <div class="inner_cell">
-                    <div class="text_cell_render border-box-sizing rendered_html">
-                        <p>I won't be including one piece of code for readability, but here all columns except for
-                            "ORIGIN_AIRPORT", "DESTINATION_AIRPORT", "SCHEDULED_DEPARTURE", "DISTANCE" and
-                            "SCHEDULED_ARRIVAL" should be removed from the dataset.</p>
-                        <p>It's because they didn't bring any value to the model or because they had too many missing
-                            values.</p>
-                        <p>This can be done by using the "del" operator or the "df.drop()" method.
-                            Examples follow:</p>
-
-                    </div>
-                </div>
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="k">del</span> <span class="n">dataset</span><span class="p">[</span><span class="n">column_name</span><span class="p">]</span>
-<span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">list_of_column_names</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing text_cell rendered">
-                <div class="prompt input_prompt">
-                </div>
-                <div class="inner_cell">
-                    <div class="text_cell_render border-box-sizing rendered_html">
-                        <h3 id="Data-Analysis:">Data Analysis:<a class="anchor-link" href="#Data-Analysis:">&#182;</a>
-                        </h3>
-                        <h5 id="Used-features">Used features<a class="anchor-link" href="#Used-features">&#182;</a></h5>
-                        <ul>
-                            <li>ORIGIN_AIRPORT: IATA code for the origin airport</li>
-                            <li>DESTINATION_AIRPORT: IATA code for the destination airport</li>
-                            <li>SCHEDULED_DEPARTURE: time of the sheduled moment for the plane to departure</li>
-                            <li>SCHEDULED_ARRIVAL: time of the sheduled moment for the plane to arrive</li>
-                            <li>DISTANCE: distance between the 2 airports in km</li>
-                            <li>ARRIVAL_DELAY: total delay of the flight in minutes</li>
+                            <li>pytorch: neural network creation and tools for training and testing it</li>
                         </ul>
 
                     </div>
@@ -16713,19 +16527,14 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <h5 id="Data-Correlation">Data Correlation<a class="anchor-link"
-                                href="#Data-Correlation">&#182;</a></h5>
-                        <p>Now, in the same way I generated the heatmap in the <a href="/suicide-rates">Suicide
-                                Rates</a> blog post, I will be generating them here. The code is the exact same one.</p>
-                        <p><img src="/post_images/flight-delays/corr.png" style="width: 60%;"></p>
-                        <p>As we can see, there are two correlations that stand out in the heatmap.</p>
-                        <p>The first correlation is between the time scheduled for the plane departure and the time
-                            scheduled for the plane to arrive. This makes sense, because the arrival time will always
-                            depend on the departure time, specially for flights between airports of the United States.
+                        <h4 id="Why-PyTorch">Why PyTorch<a class="anchor-link" href="#Why-PyTorch">&#182;</a></h4>
+                        <p>There are a few reasons why I've used PyTorch for this problem.</p>
+                        <p>One of the things to clarify is that in this webpage there are contributions using both
+                            libraries. This is why any of the two can be chosen.
+                            Also, currently, there is a heavy-changing version of Tensorflow that is not fully developed
+                            yet. This is why I think that a blog using an old version of Tensorflow might get outdated
+                            soon and it's more nutritive to learn some of the PyTorch functionalities in this meantime.
                         </p>
-                        <p>The second correlation is between the origin airport and the destination airport. This makes
-                            sense, because the flights between some airports will be more common because of closeness
-                            and stops, for instance.</p>
 
                     </div>
                 </div>
@@ -16735,11 +16544,12 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <h5 id="Histograms">Histograms<a class="anchor-link" href="#Histograms">&#182;</a></h5>
-                        <p>Now, in the same way I generated the histograms in the <a href="/suicide-rates">Suicide
-                                Rates</a> blog post, I will be generating them here. The code is the exact same one.</p>
-                        <p><img src="/post_images/flight-delays/hist-distance.png" style="width: 60%;">
-                            <img src="/post_images/flight-delays/hist-scheduled-arrival.png" style="width: 60%;"></p>
+                        <h4 id="Data-Analysis">Data Analysis<a class="anchor-link" href="#Data-Analysis">&#182;</a></h4>
+                        <p>One of the musts we have when training a deep learning model with images is to look at the
+                            class distribution. This case is a binary classification and it has 13780 images for each
+                            classification.</p>
+                        <p>This numbers can be obtained just by looking at the number of images in each class folder.
+                        </p>
 
                     </div>
                 </div>
@@ -16749,89 +16559,45 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <h4 id="Normalization">Normalization<a class="anchor-link" href="#Normalization">&#182;</a></h4>
-                        <p>Now we will have to factorise and normalise the data.</p>
-                        <p>To learn more about these 2 steps, please head to <a href="/suicide-rates">Suicide
-                            Rates</a>, where these steps are explained.</p>
+                        <p>Also, one interesting thing to do is to look at some image samples to get an idea of the
+                            problem that's being dealt with. One example of each follow:</p>
+                        <p>
+                            <img src="/post_images/malaria-cells/sample-healthy.png"  style="width: auto; height: 10%;">
+                            <img src="/post_images/malaria-cells/sample-infected.png" style="width: auto; height: 10%;">
+                        </p>
+                        <p>A healthy cell (top) and an infected cell (bottom).</p>
 
                     </div>
                 </div>
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="c1"># transform categorical to continuous</span>
-<span class="n">factorizables_mapping</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">factorizable_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ORIGIN_AIRPORT&#39;</span><span class="p">,</span> <span class="s1">&#39;DESTINATION_AIRPORT&#39;</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">fact_name</span> <span class="ow">in</span> <span class="n">factorizable_names</span><span class="p">:</span>
-    <span class="n">dataset</span><span class="p">[</span><span class="n">fact_name</span><span class="p">],</span> <span class="n">factorizables_mapping</span><span class="p">[</span><span class="n">fact_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">factorize</span><span class="p">(</span><span class="n">dataset</span><span class="p">[</span><span class="n">fact_name</span><span class="p">])</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="c1"># NORMALIZATION</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">preprocessing</span><span class="o">.</span><span class="n">MinMaxScaler</span><span class="p">()</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">values</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div class="cell border-box-sizing text_cell rendered">
                 <div class="prompt input_prompt">
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <h4 id="Classification-Metrics">Classification Metrics<a class="anchor-link"
-                                href="#Classification-Metrics">&#182;</a></h4>
-                        <p>Because this is a classification problem, we will be using specific metrics to value our
-                            model.</p>
+                        <h4 id="The-Neural-Network-Structure">The Neural Network Structure<a class="anchor-link"
+                                href="#The-Neural-Network-Structure">&#182;</a></h4>
+                        <p>We will see the code later, but the basic structure is composed of 3 parts:</p>
                         <ul>
                             <li>
-                                <p>Accuracy:
-                                    The accuracy measures the proportion of hits over the quantity of total samples.
-                                    This is often the main metric to measure the quality of the model, and it's always
-                                    convenient for it to be higher.</p>
+                                <p>Convolution + Max Pooling Layers:
+                                    This part consists of 3 2-layer groups that are always a Convolution Layer and a Max
+                                    Pooling Layer. The Convolution Layers use a ReLU activation function. The purpose of
+                                    this part is to extract all the features from the whole image.</p>
                             </li>
                             <li>
-                                <p>Precision:
-                                    The precision measures the proportion of hits from the positive class over the total
-                                    number of samples that have been predicted as positives. This means that a precision
-                                    of 1.0 implies that every sample predicted as positive, actually is positive.
-                                    However, nothing is stated about the classes predicted as negative, as they could be
-                                    positive or negative.</p>
+                                <p>Linear ReLU Layers:
+                                    The next part consists of 3 Linear Layers with a ReLU activation function. These 3
+                                    layers are placed here to learn the feature combination that makes a sample positive
+                                    or negative. This is the 'decision' part.</p>
+                            </li>
+                            <li>
+                                <p>Dropout Layer:
+                                    The last layer of the network is a Dropout Layer. Dropout Layers are normally used
+                                    to despise part of the activation. This causes to drop some of the overfitting the
+                                    net might be doing.</p>
                             </li>
                         </ul>
-                        <p>Then, this metric gives us information about how sure is the model about the classes it
-                            predicts a positive class.</p>
-                        <ul>
-                            <li>Recall:
-                                The recall measures the proportion of hits in the positive class over the total number
-                                of samples that are actually from the positive class. This means that a recall of 1.0
-                                implies that all the samples that were positive were properly detected as such.</li>
-                        </ul>
-                        <p>This could look like a perfect classification, but this metrics doesn't take into account the
-                            classification that it's given to the negative samples. Then, a model that always predicts
-                            with a positive class will have a perfect recall, but will be completely useless.</p>
-                        <p>Finally, the recall could be seen as it indicating what proportion of positive samples is
-                            detected as such.</p>
 
                     </div>
                 </div>
@@ -16841,20 +16607,11 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <h5 id="Model-Training">Model Training<a class="anchor-link" href="#Model-Training">&#182;</a>
-                        </h5>
-                        <p>Here I'll be showing how to train the model using the K-fold Cross Validation method.</p>
-                        <p>This method consists in dividing the whole dataset in equally-sized parts and one by one,
-                            train the model with all of them but one, and to test it with the remaining one. This is
-                            done once for every batch.</p>
-                        <p>To do this I will be using the KFold class from sklearn, which already does the proper
-                            divisions for us and gives us the desired indexes every time. To this day, this is one of
-                            the most robust and efficient ways of testing a model.
-                            Also, we will be storing the accuracy, precision and recall of every iteration to be able to
-                            get different measures from the list of metrics.</p>
-                        <p>Finally, in the metric calculation part we will be using functions named
-                            "get_confusion_matrix", "accuracy", "precision" and "recall". These will be included after
-                            this chunk of code.</p>
+                        <h4 id="Training">Training<a class="anchor-link" href="#Training">&#182;</a></h4>
+                        <p>The usual way of training a neural network with PyTorch is to create a Python class and then
+                            use it in the train script.</p>
+                        <p>The class features the whole structure creation, while the script uses it iteratively. This
+                            class is in a file named "model.py", and will be included onwards.</p>
 
                     </div>
                 </div>
@@ -16865,84 +16622,44 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="n">train_accuracies</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">test_accuracies</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">train_precisions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">test_precisions</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">train_recalls</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">test_recalls</span> <span class="o">=</span> <span class="p">[]</span>
+                                <pre><span></span><span class="kn">import</span> <span class="nn">torch.optim</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">func</span>
 
-<span class="c1"># starting k-fold cross validation</span>
-<span class="n">kfold</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">model_selection</span><span class="o">.</span><span class="n">KFold</span><span class="p">(</span><span class="n">n_splits</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">train_indexes</span><span class="p">,</span> <span class="n">test_indexes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">kfold</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)):</span>
-    <span class="n">train_x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">train_indexes</span><span class="p">,</span> <span class="p">:]</span>
-    <span class="n">train_y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">train_indexes</span><span class="p">]</span>
+<span class="k">class</span> <span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Net</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool_1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool_2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">conv_3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Conv2d</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pool_3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">MaxPool2d</span><span class="p">(</span><span class="n">kernel_size</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">stride</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc_1</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc_2</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc_3</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Dropout</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
 
-    <span class="n">test_x</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="n">test_indexes</span><span class="p">,</span> <span class="p">:]</span>
-    <span class="n">test_y</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="n">test_indexes</span><span class="p">]</span>
-</pre>
-                            </div>
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_1</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_1</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_2</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_2</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pool_3</span><span class="p">(</span><span class="n">func</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">conv_3</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc_1</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">func</span><span class="o">.</span><span class="n">relu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fc_2</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dropout</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc_3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">x</span>
 
-                        </div>
-                    </div>
-                </div>
+    <span class="k">def</span> <span class="nf">get_criterion_and_optimizer</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+        <span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">0.001</span><span class="p">)</span>
 
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span>    <span class="c1"># training phase</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iteration </span><span class="si">{}</span><span class="s1">: Starting Training&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-    <span class="n">classifier</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">linear_model</span><span class="o">.</span><span class="n">LogisticRegression</span><span class="p">(</span><span class="n">class_weight</span><span class="o">=</span><span class="s1">&#39;balanced&#39;</span><span class="p">,</span> <span class="n">n_jobs</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-    <span class="n">classifier</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_x</span><span class="p">,</span> <span class="n">train_y</span><span class="p">)</span>
-
-    <span class="c1"># prediction phase</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iteration </span><span class="si">{}</span><span class="s1">: Starting Prediction&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-    <span class="n">train_predicted</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">train_x</span><span class="p">)</span>
-    <span class="n">test_predicted</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_x</span><span class="p">)</span>
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="cell border-box-sizing code_cell rendered">
-                <div class="input">
-                    <div class="prompt input_prompt">In&nbsp;[0]:</div>
-                    <div class="inner_cell">
-                        <div class="input_area">
-                            <div class=" highlight hl-ipython3">
-                                <pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Iteration </span><span class="si">{}</span><span class="s1">: Starting Metric Calculation&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-
-    <span class="c1"># calculate all metrics</span>
-    <span class="n">train_confusion_matrix</span> <span class="o">=</span> <span class="n">get_confusion_matrix</span><span class="p">(</span><span class="n">train_y</span><span class="p">,</span> <span class="n">train_predicted</span><span class="p">)</span>
-    <span class="n">test_confusion_matrix</span> <span class="o">=</span> <span class="n">get_confusion_matrix</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">test_predicted</span><span class="p">)</span>
-
-    <span class="n">train_accuracy</span> <span class="o">=</span> <span class="n">accuracy</span><span class="p">(</span><span class="n">train_confusion_matrix</span><span class="p">)</span>
-    <span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">accuracy</span><span class="p">(</span><span class="n">test_confusion_matrix</span><span class="p">)</span>
-
-    <span class="n">train_precision</span> <span class="o">=</span> <span class="n">precision</span><span class="p">(</span><span class="n">train_confusion_matrix</span><span class="p">)</span>
-    <span class="n">test_precision</span> <span class="o">=</span> <span class="n">precision</span><span class="p">(</span><span class="n">test_confusion_matrix</span><span class="p">)</span>
-
-    <span class="n">train_recall</span> <span class="o">=</span> <span class="n">recall</span><span class="p">(</span><span class="n">train_confusion_matrix</span><span class="p">)</span>
-    <span class="n">test_recall</span> <span class="o">=</span> <span class="n">recall</span><span class="p">(</span><span class="n">test_confusion_matrix</span><span class="p">)</span>
-
-    <span class="c1"># optional logging</span>
-
-    <span class="c1"># append to the tracking lists</span>
-    <span class="n">train_accuracies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_accuracy</span><span class="p">)</span>
-    <span class="n">test_accuracies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_accuracy</span><span class="p">)</span>
-
-    <span class="n">train_precisions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_precision</span><span class="p">)</span>
-    <span class="n">test_precisions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_precision</span><span class="p">)</span>
-
-    <span class="n">train_recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">train_recall</span><span class="p">)</span>
-    <span class="n">test_recalls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">test_recall</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">optimizer</span>
 </pre>
                             </div>
 
@@ -16956,10 +16673,8 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <p>Now I will include the functions I talked about early. Because this dataset is so big, doing
-                            each the metric calculation everytime was starting to get slower. I included this functions
-                            in order to run the slow part only once ("get_confusion_matrix") and to extract the metrics
-                            fast and easy after.</p>
+                        <p>First we will create the image loaders that will feed images to our net.</p>
+                        <p>It's important to shuffle the samples, because the training will vary.</p>
 
                     </div>
                 </div>
@@ -16970,32 +16685,43 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="k">def</span> <span class="nf">get_confusion_matrix</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">predicted</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)</span>
+                                <pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
+<span class="kn">import</span> <span class="nn">datasets</span> <span class="k">as</span> <span class="nn">ds</span>
+<span class="kn">import</span> <span class="nn">model</span>
 
-<span class="k">def</span> <span class="nf">accuracy</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">):</span>
-    <span class="n">denom</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">denom</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Forcing ill-defined accuracy to 0.0&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mf">0.0</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span> <span class="o">/</span> <span class="n">denom</span>
+<span class="n">test_prop</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">datadir</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span>
 
+<span class="n">train_transforms</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+                                       <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+                                       <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+                                                            <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+                                       <span class="p">])</span>
 
-<span class="k">def</span> <span class="nf">precision</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">):</span>
-    <span class="n">denom</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">denom</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Forcing ill-defined precision to 0.0&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mf">0.0</span>
-    <span class="k">return</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">denom</span>
+<span class="n">test_transforms</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">64</span><span class="p">),</span>
+                                      <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+                                      <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">([</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+                                                           <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">])</span>
+                                      <span class="p">])</span>
 
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">train_transforms</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">datadir</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">test_transforms</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">recall</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">):</span>
-    <span class="n">denom</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">denom</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Forcing ill-defined recall to 0.0&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="mf">0.0</span>
-    <span class="k">return</span> <span class="n">confusion_matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">denom</span>
+<span class="n">num_train</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_data</span><span class="p">)</span>
+<span class="n">indexes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">num_train</span><span class="p">))</span>
+<span class="n">n_test_samples</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">floor</span><span class="p">(</span><span class="n">test_prop</span> <span class="o">*</span> <span class="n">num_train</span><span class="p">))</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">indexes</span><span class="p">)</span>
+
+<span class="n">train_idx</span><span class="p">,</span> <span class="n">test_idx</span> <span class="o">=</span> <span class="n">indexes</span><span class="p">[</span><span class="n">n_test_samples</span><span class="p">:],</span> <span class="n">indexes</span><span class="p">[:</span><span class="n">n_test_samples</span><span class="p">]</span>
+
+<span class="n">train_sampler</span> <span class="o">=</span> <span class="n">SubsetRandomSampler</span><span class="p">(</span><span class="n">train_idx</span><span class="p">)</span>
+<span class="n">test_sampler</span> <span class="o">=</span> <span class="n">SubsetRandomSampler</span><span class="p">(</span><span class="n">test_idx</span><span class="p">)</span>
+
+<span class="n">train_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">train_data</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">train_sampler</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+<span class="n">test_loader</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">DataLoader</span><span class="p">(</span><span class="n">test_data</span><span class="p">,</span> <span class="n">sampler</span><span class="o">=</span><span class="n">test_sampler</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
 </pre>
                             </div>
 
@@ -17009,9 +16735,8 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <p>Now it's time to print the metrics we collected previously. In this case I added the mean,
-                            maximum and minimum of every metric we collected. Despite that, normally, the two most
-                            useful actions will be to look at all the values or to only look at the mean.</p>
+                        <p>Here we will initialize the basic constants, log info and create the empty (untrained)
+                            network.</p>
 
                     </div>
                 </div>
@@ -17022,14 +16747,18 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ACCURACY:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MEAN: </span><span class="si">{}</span><span class="s2">    MAX: </span><span class="si">{}</span><span class="s2">    MIN: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">test_accuracies</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">test_accuracies</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">test_accuracies</span><span class="p">)))</span>
+                                <pre><span></span><span class="n">model_data_path</span> <span class="o">=</span> <span class="s1">&#39;model.data&#39;</span>
+<span class="n">n_epochs</span> <span class="o">=</span> <span class="mi">20</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PRECISION:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MEAN: </span><span class="si">{}</span><span class="s2">    MAX: </span><span class="si">{}</span><span class="s2">    MIN: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">test_precisions</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">test_precisions</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">test_precisions</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Detected classes: &#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train_loader</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RECALL:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MEAN: </span><span class="si">{}</span><span class="s2">    MAX: </span><span class="si">{}</span><span class="s2">    MIN: </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">test_recalls</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">test_recalls</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="n">test_recalls</span><span class="p">)))</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">Net</span><span class="p">()</span>
+<span class="n">criterion</span><span class="p">,</span> <span class="n">optimizer</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_criterion_and_optimizer</span><span class="p">()</span>
+<span class="n">test_loss_min</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">Inf</span>
+
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Starting Training; n_epochs=</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_epochs</span><span class="p">))</span>
 </pre>
                             </div>
 
@@ -17043,9 +16772,7 @@ Adapted from GitHub theme
                 </div>
                 <div class="inner_cell">
                     <div class="text_cell_render border-box-sizing rendered_html">
-                        <p>Finally, to be able to evaluate the quality of the model through a plot, the most used graphs
-                            are the ROC and Precision-Recall curve.</p>
-                        <p>We can generate them with the following pieces of code:</p>
+                        <p>Now, we will train, test and measure metrics once per each epoch.</p>
 
                     </div>
                 </div>
@@ -17056,12 +16783,27 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="c1"># at this point we must have the following variables defined:</span>
-<span class="c1"># &quot;classifier&quot; the classifier object</span>
-<span class="c1"># &quot;test_x&quot; the features of the test dataset</span>
-<span class="c1"># &quot;test_y&quot; the class of the test dataset</span>
+                                <pre><span></span><span class="k">for</span> <span class="n">epoch</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_epochs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
 
-<span class="n">probs_test_y</span> <span class="o">=</span> <span class="n">classifier</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">test_x</span><span class="p">)[:,</span> <span class="mi">1</span><span class="p">]</span>
+    <span class="c1"># set losses to 0 at the beginning of each epoch</span>
+    <span class="n">train_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+    <span class="n">test_loss</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="c1"># start training mode</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:02d}</span><span class="s1">: Starting Training&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epoch</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+
+    <span class="c1"># train by batches</span>
+    <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">train_loader</span><span class="p">:</span>
+        <span class="c1"># clear the gradients of all optimized variables</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+
+        <span class="n">train_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre>
                             </div>
 
@@ -17076,21 +16818,15 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="c1"># ROC curve</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+                                <pre><span></span>    <span class="c1"># start evaluation mode</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:02d}</span><span class="s1">: Starting Testing&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epoch</span><span class="p">))</span>
+    <span class="n">model</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
 
-<span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">thresholds</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_curve</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">probs_test_y</span><span class="p">)</span>
-<span class="n">auc</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">roc_auc_score</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">probs_test_y</span><span class="p">)</span>
-
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">&quot;--&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;auc = 0.5&quot;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fpr</span><span class="p">,</span> <span class="n">tpr</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;auc = &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">auc</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;ROC Curve&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;FPR (1 - Specificity)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;TPR (Sensitivity)&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="c1"># evaluate by batches</span>
+    <span class="k">for</span> <span class="n">data</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">test_loader</span><span class="p">:</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">model</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+        <span class="n">test_loss</span> <span class="o">+=</span> <span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">()</span> <span class="o">*</span> <span class="n">data</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre>
                             </div>
 
@@ -17105,19 +16841,16 @@ Adapted from GitHub theme
                     <div class="inner_cell">
                         <div class="input_area">
                             <div class=" highlight hl-ipython3">
-                                <pre><span></span><span class="c1"># Precision-Recall curve</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">precision_recall_curve</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">probs_test_y</span><span class="p">)</span>
-<span class="n">avg</span> <span class="o">=</span> <span class="n">sklearn</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">average_precision_score</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">test_predicted</span><span class="p">)</span>
+                                <pre><span></span>    <span class="c1"># calulate the average losses</span>
+    <span class="n">avg_train_loss</span> <span class="o">=</span> <span class="n">train_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="n">avg_test_loss</span> <span class="o">=</span> <span class="n">test_loss</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">test_loader</span><span class="o">.</span><span class="n">dataset</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Epoch </span><span class="si">{:02d}</span><span class="s1">: </span><span class="se">\t</span><span class="s1">Training Loss: </span><span class="si">{:.6f}</span><span class="s1"> </span><span class="se">\t</span><span class="s1">Test Loss: </span><span class="si">{:.6f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">epoch</span><span class="p">,</span> <span class="n">avg_train_loss</span><span class="p">,</span> <span class="n">avg_test_loss</span><span class="p">))</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="s1">&#39;post&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">recall</span><span class="p">,</span> <span class="n">precision</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Recall&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Precision&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.05</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Precision - Recall curve (AP=</span><span class="si">{0:0.2f}</span><span class="s2">)&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">avg</span><span class="p">))</span>
+    <span class="c1"># save the model if it means an upgrade from the best result we&#39;ve had</span>
+    <span class="k">if</span> <span class="n">avg_test_loss</span> <span class="o">&lt;=</span> <span class="n">test_loss_min</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Test loss decreased (</span><span class="si">{:.6f}</span><span class="s1"> --&gt; </span><span class="si">{:.6f}</span><span class="s1">).  Saving model.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">test_loss_min</span><span class="p">,</span> <span class="n">avg_test_loss</span><span class="p">))</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">state_dict</span><span class="p">(),</span> <span class="n">model_data_path</span><span class="p">)</span>
+        <span class="n">test_loss_min</span> <span class="o">=</span> <span class="n">avg_test_loss</span>
 </pre>
                             </div>
 
@@ -17125,8 +16858,39 @@ Adapted from GitHub theme
                     </div>
                 </div>
 
+            </div>
+            <div class="cell border-box-sizing text_cell rendered">
+                <div class="prompt input_prompt">
+                </div>
+                <div class="inner_cell">
+                    <div class="text_cell_render border-box-sizing rendered_html">
+                        <h4 id="Results">Results<a class="anchor-link" href="#Results">&#182;</a></h4>
+                        <p>With this model we've got decent results:</p>
+                        <p>Accuracy: 0.86</p>
+                        <p>Precision: 0.77</p>
+                        <p>Recall: 0.93</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cell border-box-sizing text_cell rendered">
+                <div class="prompt input_prompt">
+                </div>
+                <div class="inner_cell">
+                    <div class="text_cell_render border-box-sizing rendered_html">
+                        <p>However, this problem is specially interesting because of a restriction the nature of this
+                            problem sets.</p>
+                        <p>This is a model to be used in a healthcare field. This means that the metrics of the model
+                            have to be inspected even more carefully than usual, because the usages of this model might
+                            make people's health depend on it. In this case (considering an infected cell the positive
+                            class) we need an incredibly high recall for the model. This is because the recall tells us
+                            what proportion of infected cells are detected, and we must keep that proportion as high as
+                            possible in order to miss the less infected patients as possible.</p>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
