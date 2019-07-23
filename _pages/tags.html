@@ -8,7 +8,7 @@ permalink: /tags/
 {% assign tag_words = site_tags | split:',' | sort %}
 
 <section id="tags">
-  <h1> Tags in Blog</h1>
+  <h1> Tags in DataUAB</h1>
   <ul class="tags cf">
 <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
