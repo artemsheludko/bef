@@ -11,7 +11,9 @@ layout: main
     </a>
     <a href="{{post.url | prepend: site.baseurl}}">
       <div class="chapter_inner">
+        {% if site.showdate %}
         <p class="chapter_number">{{post.date | date: '%Y, %b %d'}}</p>
+        {% endif %}
         <h3 class="chapter_title">{{post.title}}</h3>
       </div>
     </a>
