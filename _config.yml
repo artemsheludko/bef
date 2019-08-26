@@ -13,6 +13,9 @@ video: mountains.mp4 # add banner video. Add your video file to the folder video
 banner-title: # add banner title
 banner-desc: # add banner description
 
+# Index settings
+showdate: true # set 'false' for hidden date in list of posts
+
 # Author settings
 author-pic: face.jpg # your photo
 author-name: # your name
