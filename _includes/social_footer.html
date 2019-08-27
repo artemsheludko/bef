@@ -30,4 +30,9 @@
   {% else %}
   <li><a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
   {% endif %}
+  {% if site.whatsapp_url %}
+  <li><a href="{{ site.whatsapp_url }}" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+  {% else %}
+  <li><a href="#" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+  {% endif %}
 </ul>
