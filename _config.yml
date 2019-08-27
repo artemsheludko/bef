@@ -28,6 +28,7 @@ instagram_url: # add url link
 pinterest_url: # add url link
 dribbble_url:  # add url link
 facebook_url:  # add url link
+whatsapp_url:  # add url link
 
 # Disqus
 discus_identifier: mr-brown # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
