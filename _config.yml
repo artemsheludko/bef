@@ -1,11 +1,11 @@
-logo: # add logo name
-title: Bef - Enjoy Freedom
+logo: Parth Patel's Blog # add logo name
+title: RocoPi - Kindness and Love are the strongest things.
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/bef" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
@@ -15,14 +15,14 @@ banner-desc: # add banner description
 
 # Author settings
 author-pic: face.jpg # your photo
-author-name: # your name
-about-author: # about author
-email: your-email@domain.com # your email
-phone: (496)-169-6557 # your pnone number
-website: https://dwayne.example.com # you website
+author-name: Parthkumar Patel # your name
+about-author: Hi, I am a student who likes to venture in to a lot of new things. I should be studying but I take some time out to complete my hobbies and live life to the fullest. # about author
+email: parth14@gmail.com # your email
+phone: (732)-397-0088 # your pnone number
+website: https://parthpatell.github.io # you website
 
 # Social link
-google_url:    # add url link
+google_url: parth14@gmail.com   # add url link
 twitter_url: https://twitter.com/parth_apatel   # add url link
 instagram_url: https://www.instagram.com/parth_apatel/# add url link
 
