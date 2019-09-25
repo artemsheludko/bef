@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "My first post and why?"
+title: "My first post and why I am blogging?"
 img: himalayan.jpg # Add image post (optional)
-date: 2017-07-12 12:55:00 +0300
+date: 2019-09-24 3:51:00 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 tag: [Blogging]
 ---
