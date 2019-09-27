@@ -16,4 +16,4 @@ This being the first post I don't want to include a lot of details but just a fe
 
 You will get to know me more from my future posts. Let me explain what I am going to post here on this webpage. So I wanted to post my everyday thoughts, but I also wanted to have a way to explain the projects I work on in my day to day student life if you like my thoughts blogs more than my project blogs (which can be technical then feel free to skip those). 
 
-If you have reached this far I thank you so much for reading my first blog and cheers to many more!!  
+If you have reached this far I thank you so much for reading my first blog and cheers to many more!!!
