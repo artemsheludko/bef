@@ -1,11 +1,11 @@
-logo: # add logo name
-title: Bef - Enjoy Freedom
+logo:  Parth Patel's Blog # add logo name
+title: Parth Patel
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 permalink: ':title/'
-baseurl: "/bef" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
@@ -15,22 +15,21 @@ banner-desc: # add banner description
 
 # Author settings
 author-pic: face.jpg # your photo
-author-name: # your name
-about-author: # about author
-email: your-email@domain.com # your email
-phone: (496)-169-6557 # your pnone number
-website: https://dwayne.example.com # you website
+author-name: Parthkumar Patel # your name
+about-author: Hi, I am a Computer Engineering student who likes to venture into a lot of new things. I enjoying design apps and website in my free time. A lot of my projects and personal thoughts can be found on the main page. # about author
+email: parth14@gmail.com # your email
+phone: (732)-397-0088 # your pnone number
+website: https://parthpatell.github.io # you website
 
 # Social link
-google_url:    # add url link
-twitter_url:   # add url link
-instagram_url: # add url link
-pinterest_url: # add url link
-dribbble_url:  # add url link
-facebook_url:  # add url link
+google_url: parth14@gmail.com   # add url link
+twitter_url: https://twitter.com/parth_apatel   # add url link
+instagram_url: https://www.instagram.com/parth_apatel/ # add url link
+linkedin_url: https://www.linkedin.com/in/parth-apatel/
+
 
 # Disqus
-discus_identifier: mr-brown # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
+discus_identifier: parthpatelblogs # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
 
 # Newsletter
 mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
@@ -54,3 +53,4 @@ gems:
 
 include: [_pages]
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+

@@ -36,7 +36,24 @@ layout: default
       </footer>
     </div>
   </article> <!-- End Section Post -->
-
+{% include disqus.html %}
+    
+  <section class="recent_box">
+    <div class="post_wrapper">
+      <h2 class="recent_title">Recent post</h2>
+      <div class="recent_list">
+        {% for post in site.posts offset:0 limit:6 %}
+          {% if post.title %}
+            <a href="{{ post.url | prepend: site.baseurl }}"
+              class="recent_item"
+              style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
+                <span>{{ post.title }}</span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </section> <!-- End Section Recent Box -->
   <section class="author cf">
     <div class="post_wrapper">
       <div class="author_image">
@@ -67,25 +84,7 @@ layout: default
       </div>
     </div>
   </section> <!-- End Section Author -->
-
-  <section class="recent_box">
-    <div class="post_wrapper">
-      <h2 class="recent_title">Recent post</h2>
-      <div class="recent_list">
-        {% for post in site.posts offset:0 limit:6 %}
-          {% if post.title %}
-            <a href="{{ post.url | prepend: site.baseurl }}"
-              class="recent_item"
-              style="background-image: url( {{ "/assets/img/" | prepend: site.baseurl | append : post.img}} )">
-                <span>{{ post.title }}</span>
-            </a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </div>
-  </section> <!-- End Section Recent Box -->
   
-  {% include disqus.html %}
   
 </main> <!-- End Section Post Content -->
 
