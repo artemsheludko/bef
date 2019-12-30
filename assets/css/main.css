@@ -4014,6 +4014,7 @@ cite {
 
 .chapters .chapter img {
   width: 100%;
+  height: 100%
   vertical-align: middle;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
