@@ -4617,10 +4617,27 @@ cite {
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem;
   background-color: #d25469;
-  -webkit-box-shadow: 0 2px 0 #c0334a;
+  -webkit-box-shadow: 0 2px 0 #c0334a;  
           box-shadow: 0 2px 0 #c0334a;
   -webkit-transition: all .35s;
   transition: all .35s;
+}
+
+#tags #cat li {
+  float: left;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 1px solid #141a9f;
+  -webkit-border-radius: 0.5rem;
+          border-radius: 0.5rem;
+  background-color: #1f28f4;
+  -webkit-box-shadow: 0 2px 0 #141a9f;  
+          box-shadow: 0 2px 0 #141a9f;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+
+#tags #cat li:hover {
+  background-color: #146cfe;
 }
 
 #tags .tags li:hover {
