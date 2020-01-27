@@ -11801,7 +11801,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Motivation">1. Motivation<a class="anchor-link" href="#1.-Motivation">&#182;</a></h3><p>Breast cancer is the most common type of cancer in women around the world and the second highest in terms of mortality rates, and is normally detected when an abnormal lump or a tiny speck of calcium are found (from self-examination or x-ray). Early detection of this kind of cancer can greatly improve survival chances by promoding clinical treatment to patients as soon as possible. That said, the main purpose of the this post is to predict wether a lump is benign or malign through data analysis.</p>
+<h3 id="1.-Motivation">1. Motivation<a class="anchor-link" href="#1.-Motivation">&#182;</a></h3><p>Breast cancer is the most common type of cancer in women around the world and the second highest in terms of mortality rates, and is normally detected when an abnormal lump or a tiny speck of calcium are found (from self-examination or x-ray). Early detection of this kind of cancer can greatly improve survival chances by promoding clinical treatment to patients as soon as possible. That said, the main purpose of this post is to predict wether a lump is benign or malign through data analysis.</p>
 <p>All Information and data related to this problem can be found here:
 <a href="https://www.kaggle.com/uciml/breast-cancer-wisconsin-data/">https://www.kaggle.com/uciml/breast-cancer-wisconsin-data/</a></p>
 
@@ -13499,7 +13499,7 @@ Selected features: Index([&#39;radius_mean&#39;, &#39;texture_mean&#39;, &#39;pe
 <pre>+--------------------+--------------------+-------------------+
 |      Accuracy      |       Recall       |      F1Score      |
 +--------------------+--------------------+-------------------+
-| 0.9590643274853801 | 0.9206349206349206 | 0.943089430894309 |
+| 0.94640643274853801 | 0.9206349206349206 | 0.943089430894309 |
 +--------------------+--------------------+-------------------+
 </pre>
 </div>
@@ -13625,6 +13625,66 @@ Selected features: Index([&#39;radius_mean&#39;, &#39;texture_mean&#39;, &#39;pe
 </div>
 
 </div>
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Plotting ROC Curves</span>
+<span class="n">
+y_probs = clf.predict(x_test)
+y_probr = rfecv.predict(xrf_test)
+
+fpr, tpr, thresholds = metrics.roc_curve(y_test, y_probs)
+fprr, tprr, thresholdsr = metrics.roc_curve(y_test, y_probr)
+auc = metrics.roc_auc_score(y_test, y_probs)
+aucr = metrics.roc_auc_score(y_test, y_probr)
+
+x = np.linspace(0, 1)
+y = x
+plt.figure(figsize=(7,5))
+plt.plot(x, y, linestyle="--", label="auc = 0.5")
+plt.plot(fprr, tprr, label="Random Forest = " + str(aucr))
+plt.plot(fpr, tpr, label="Support Vector Machine = " + str(auc))
+plt.title("ROC Curve")
+plt.xlabel("False Positive Rate")
+plt.ylabel("True Positive Rate")
+plt.legend(loc=4)
+plt.show()
+plt.close()
+</span> 
+</pre></div>
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Apart from the confussion matrices, there is another way to visualize the performance of our models. In the next picture we can see the ROC curves of both models, under these curves there is something called AUC (Area Under Curve), which basically indicates how close our ROC curve is to the ideal ROC curve. Ideally we would want an AUC as close to 1 as possible and higher than 0.5, else it means our model is not performing very well. In this particular example we can clearly see how we got an AUC of 0.97 for the SVM algorithm and 0.946 for the Random Forest, so the SVM is working slightly better. This means that there is a 97% chance our algorithm distinguishes between the positive and negative class.</p>
+<p><img src="\post_images\breast_cancer_files\roccurve.png" style="width:441px;height:320px;"></p>
+</div>
+</div>
+</div>
+
+
+
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
