@@ -4591,7 +4591,7 @@ cite {
 }
 
 #tags {
-  background-color: #ffffff;
+  background-color: #262626;
   padding: 2rem 1rem 4rem;
   width: 960px;
   max-width: 90%;
@@ -4601,7 +4601,7 @@ cite {
 #tags h1 {
   text-align: center;
   margin: 2rem 0 3rem;
-  color: #262626;
+  color: #ffffff;
 }
 
 #tags .tags {
@@ -5067,4 +5067,44 @@ cite {
     margin: 10px;
 }
 .chapter img {
+}
+
+
+#categories h1{
+  color: white;
+  text-align: center;
+}
+
+.category-buttons{
+  width: 75%;
+  margin: auto;
+}
+
+.category-buttons button{
+  background-color: #FF4CAB;
+  color: black;
+  margin: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.grid-item img {
+  width: 402px;
+  height: 203px;
+  background-color: #262626;
+  background-size: cover;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  background-color: #262626;
+}
+
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+  background-color: #262626;
 }

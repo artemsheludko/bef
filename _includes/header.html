@@ -1,13 +1,12 @@
 <header class="main_header">
+	<div class="logo">
+		<a href="{{site.baseurl}}/" class="logo">
+			{% if site.logo %}{{site.logo}}{% else %}B<span>ef</span>{% endif %}</a>
+	</div>
 
-
-    <div class="logo">
-  <a href="{{site.baseurl}}/" class="logo">{% if site.logo %}{{site.logo}}{% else %}B<span>ef</span>{% endif %}</a>
-    </div>
-
-  <nav class="main_menu">
-  	<a href="{{site.baseurl}}/tags/">#Tag Search</a>
-    <a href="{{site.baseurl}}/about/">About</a>
-    <a href="{{site.baseurl}}/contact/">Contact</a>
-  </nav>
+	<nav class="main_menu">
+		<a href="{{site.baseurl}}/categories/">Categories</a>
+		<a href="{{site.baseurl}}/about/">About</a>
+		<a href="{{site.baseurl}}/contact/">Contact</a>
+	</nav>
 </header> <!-- End Section Header -->
