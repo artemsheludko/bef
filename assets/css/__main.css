@@ -5070,40 +5070,41 @@ cite {
 }
 
 
-#categories-sidebar{
-  width: 25%;
-  height: 95%;
-  background-color: #262626;
-  position: fixed;
-  margin-top: 5%;
-}
-
-#categories-buttons{
-  margin-left: 2%;
-}
-
-.category-button{
-  font-size: 16px;
+#categories h1{
   color: white;
-  cursor: pointer;
-  width: 50%;
+  text-align: center;
+}
+
+.category-buttons{
+  width: 75%;
   margin: auto;
-  margin-bottom: 15px;
+}
+
+.category-buttons button{
+  background-color: #FF4CAB;
+  color: black;
+  margin: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.grid-item img {
+  width: 402px;
+  height: 203px;
   background-color: #262626;
-  border: 1px solid white;
-  border-radius: 16px;
+  background-size: cover;
 }
 
-.category-button:hover{
-  color: black;
-  background-color: #EC0261;
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  background-color: #262626;
 }
 
-.category-button p{
-  color: black;
-}
-
-#categories-content{
-  margin-left: 25%;
-  padding: 0px 10px;
+.grid-item {
+  font-size: 30px;
+  text-align: center;
+  background-color: #262626;
 }

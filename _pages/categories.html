@@ -5,25 +5,21 @@ permalink: /categories/
 ---
 
 {% include header.html %}
-
-<script src="{{ base.url | prepend: site.url }}/assets/js/categories.js"></script>
-
 <section id="categories">
 
-	<h1>Post Categories</h1>
-	
+	<div id="categories-sidebar">
 
-	<div class="category-buttons">
-		{% for category in site.categories %}
-			{% assign category_name = category[0] %}
-			<button id="{{category_name}}-button" onclick="switch_visibility('{{category_name}}')">
-				<h2>{{category_name}}</h2>
-			</button>
-		{% endfor %}
+		<div id="categories-buttons">
+			{% for category in site.categories %}
+				{% assign category_name = category[0] %}
+				<button class="category-button" id="{{category_name}}-button">
+					<h2>{{category_name}}</h2>
+				</button>
+			{% endfor %}
+		</div>
 	</div>
 
-	<div class="grid-container">
-
+	<div id="categories-content">
 		{% for category in site.categories %}
 
 			{% assign category_name = category[0] %}
@@ -32,9 +28,9 @@ permalink: /categories/
 			{% for post in posts %}
 
 				<div class="{{category_name}}-post" style="display: block;">
-					<div class="grid-item">
+					<div>
 						<a href="{{ post.url }}">
-							<img src="../assets/img/{{ post.img }}">
+							<p>{{post.title}}</p>
 						</a>
 					</div>
 				</div>
