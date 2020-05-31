@@ -5069,41 +5069,96 @@ cite {
 .chapter img {
 }
 
-
-#categories-sidebar{
-  width: 25%;
-  height: 95%;
-  background-color: #262626;
-  position: fixed;
-  margin-top: 5%;
-}
-
-#categories-buttons{
-  margin-left: 2%;
-}
-
-.category-button{
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
+.category-title{
   width: 50%;
   margin: auto;
-  margin-bottom: 15px;
-  background-color: #262626;
-  border: 1px solid white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.category-title button{
+  height: 75%;
+  cursor: pointer;
   border-radius: 16px;
-}
-
-.category-button:hover{
   color: black;
-  background-color: #EC0261;
+  border: 1px solid #FF3591;
+  background-color: #FF3591;
 }
 
-.category-button p{
+.category-title button:hover{
+  color: black;
+  border: 1px solid #FF3591;
+  background-color: #FF3591;
+}
+
+.post{
+  width: 50%;
+  margin: auto;
+  margin-bottom: 25px;
+  background-color: #262626;
+}
+
+.post-grid-container {
+  display: grid;
+  grid-template-areas:
+    'image  title title title title'
+    'image  date date author author';
+  grid-gap: 10px;
+  padding: 10px;
+  color: white;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+.post-grid-container:hover{
+  background-color: #FF3591;
   color: black;
 }
 
-#categories-content{
-  margin-left: 25%;
-  padding: 0px 10px;
+.post-grid-container div{
+  text-align: center;
+}
+
+.post-title{
+  grid-area: title;
+}
+
+.post-image{
+  grid-area: image;
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 200px;
+  height: 100px;
+}
+
+.post-image img{
+  width: 200px;
+  height: 100px;
+}
+
+.post-date{
+  grid-area: date;
+}
+
+.post-author{
+  grid-area: author;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 10px;
+  height: 8px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }

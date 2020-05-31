@@ -5,39 +5,45 @@ permalink: /categories/
 ---
 
 {% include header.html %}
+
+<script src="{{ base.url | prepend: site.url }}/assets/js/categories.js"></script>
+
 <section id="categories">
 
-	<div id="categories-sidebar">
-
-		<div id="categories-buttons">
-			{% for category in site.categories %}
-				{% assign category_name = category[0] %}
-				<button class="category-button" id="{{category_name}}-button">
-					<h2>{{category_name}}</h2>
-				</button>
-			{% endfor %}
-		</div>
-	</div>
-
-	<div id="categories-content">
 		{% for category in site.categories %}
 
 			{% assign category_name = category[0] %}
 			{% assign posts = category[1] %}
-				
-			{% for post in posts %}
 
-				<div class="{{category_name}}-post" style="display: block;">
-					<div>
-						<a href="{{ post.url }}">
-							<p>{{post.title}}</p>
-						</a>
-					</div>
+			<div class="category">
+
+				<div class="category-title">
+					<button id="{{category_name}}-button" onclick="switch_visibility('{{category_name}}')">
+						<h3>{{category_name}}</h3>
+					</button>
 				</div>
 
-			{% endfor %}
+				<div id="{{category_name}}-posts">
+					
+					{% for post in posts %}
+					<div class="post">
+						<a href="{{post.url}}" style="text-decoration: none;">
+							<div class="post-grid-container">
+								<div class="post-image"><img src="../assets/img/{{post.img}}"></div>
+								<div class="post-title"><h3>{{post.title}}</h3></div>
+								<div class="post-author">{{post.author-name}}</div>
+								<div class="post-date">{{post.date | date_to_string}}</div>
+							</div>
+						</a>
+					</div>
+					{% endfor %}
+
+				</div>
+
+			</div>
+
+			
 
 		{% endfor %}
-	</div>
 
 </section>
