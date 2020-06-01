@@ -10,40 +10,56 @@ permalink: /categories/
 
 <section id="categories">
 
+	<div id="categories-filter">
+
+		<div id="categories-title">
+			<h2>Categories</h2>
+		</div>
+
 		{% for category in site.categories %}
-
 			{% assign category_name = category[0] %}
-			{% assign posts = category[1] %}
+			{% capture category_id %}{{ category_name | split: ' ' | join: '_' }}{% endcapture %}
+			<button id="{{category_id}}-button" class="filter-button" onclick="switch_visibility('{{category_id}}')">
+				<h3>{{category_name}}</h3>
+			</button>
+		{% endfor %}
 
-			<div class="category">
+	</div>
 
-				<div class="category-title">
-					<button id="{{category_name}}-button" onclick="switch_visibility('{{category_name}}')">
-						<h3>{{category_name}}</h3>
-					</button>
-				</div>
+	{% for category in site.categories %}
 
-				<div id="{{category_name}}-posts">
-					
-					{% for post in posts %}
-					<div class="post">
-						<a href="{{post.url}}" style="text-decoration: none;">
-							<div class="post-grid-container">
-								<div class="post-image"><img src="../assets/img/{{post.img}}"></div>
-								<div class="post-title"><h3>{{post.title}}</h3></div>
-								<div class="post-author">{{post.author-name}}</div>
-								<div class="post-date">{{post.date | date_to_string}}</div>
+		{% assign category_name = category[0] %}
+		{% capture category_id %}{{ category_name | split: ' ' | join: '_' }}{% endcapture %}
+		{% assign posts = category[1] %}
+
+		<div class="category">
+
+			<div id="{{category_id}}-posts" class="posts">
+				
+				{% for post in posts %}
+				<div class="post">
+					<a href="{{post.url}}" style="text-decoration: none;">
+						<div class="post-grid-container">
+							<div class="post-image"><img src="../assets/img/{{post.img}}"></div>
+							<div class="post-title"><h3>{{post.title}}</h3></div>
+							<div class="post-author">{{post.author-name}}</div>
+							<div class="post-date">{{post.date | date_to_string}}</div>
+							<div class="post-tags">
+								{% for tag in post.tags %}
+									<div class="tag">{{tag}}</div>
+								{% endfor %}
 							</div>
-						</a>
-					</div>
-					{% endfor %}
-
+						</div>
+					</a>
 				</div>
+				{% endfor %}
 
 			</div>
 
-			
+		</div>
 
-		{% endfor %}
+		
+
+	{% endfor %}
 
 </section>

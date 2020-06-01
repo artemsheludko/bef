@@ -5069,26 +5069,33 @@ cite {
 .chapter img {
 }
 
-.category-title{
-  width: 50%;
+#categories-filter{
+  width: 75%;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.category-title button{
-  height: 75%;
+#categories-title{
+  text-align: center;
+}
+
+#categories-title{
+  color: white;
+}
+
+#categories-filter button{
+  color: white;
+  outline:none;
   cursor: pointer;
+  height: 75%;
   border-radius: 16px;
-  color: black;
-  border: 1px solid #FF3591;
-  background-color: #FF3591;
+  border: 1px solid white;
+  background-color: #1c1c1c;
 }
 
-.category-title button:hover{
-  color: black;
-  border: 1px solid #FF3591;
-  background-color: #FF3591;
+.posts{
+  display: none;
 }
 
 .post{
@@ -5101,8 +5108,9 @@ cite {
 .post-grid-container {
   display: grid;
   grid-template-areas:
-    'image  title title title title'
-    'image  date date author author';
+    'image title title'
+    'image date author'
+    'tags tags tags';
   grid-gap: 10px;
   padding: 10px;
   color: white;
@@ -5144,21 +5152,20 @@ cite {
   grid-area: author;
 }
 
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
+.post-tags{
+  grid-area: tags;
+}
+
+.tag{
+  color: white;
+  padding: 2px;
+  margin: 4px;
   display: inline-block;
-  padding: 3px;
-  width: 10px;
-  height: 8px;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 
-.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.post-grid-container:hover .tag{
+  border: 1px solid black;
+  color: black;
 }

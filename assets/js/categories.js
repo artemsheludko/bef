@@ -1,29 +1,28 @@
 
 function switch_visibility(id) {
 
-	var posts_id = id.concat("-posts");
+	var all_posts = document.getElementsByClassName("posts");
 
-	var posts = document.getElementById(posts_id);
-
-	if (posts.style.display === "none") {
-		posts.style.display = "block";
-	} else {
-		posts.style.display = "none";
+	for (var i = 0; i < all_posts.length; i++) {
+	  all_posts[i].style.display = "none";
 	}
 
-	var button_id = id.concat("-button");
+	var posts = document.getElementById(id.concat("-posts"));
 
-	var button = document.getElementById(button_id);
+	posts.style.display = "block";
 
-	if (button.style.backgroundColor == 'rgb(38, 38, 38)') {
-		button.style.backgroundColor = "#FF3591";
-		button.style.color = "black";
-		button.style.border = "1px solid #FF3591";
-	} else {
-		button.style.backgroundColor = "#262626";
-		button.style.color = "white";
-		button.style.border = "1px solid white";
+	var all_buttons = document.getElementsByClassName("filter-button");
 
+	for (var i = 0; i < all_buttons.length; i++) {
+	  all_buttons[i].style.backgroundColor = "#1C1C1C";
+	  all_buttons[i].style.color = "white";
+	  all_buttons[i].style.border = "1px solid white";
 	}
+
+	var button = document.getElementById(id.concat("-button"));
+
+	button.style.backgroundColor = "#FF3591";
+	button.style.color = "black";
+	button.style.border = "1px solid #FF3591";
 
 }
