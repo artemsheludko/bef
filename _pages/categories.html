@@ -19,9 +19,15 @@ permalink: /categories/
 		{% for category in site.categories %}
 			{% assign category_name = category[0] %}
 			{% capture category_id %}{{ category_name | split: ' ' | join: '_' }}{% endcapture %}
-			<button id="{{category_id}}-button" class="filter-button" onclick="switch_visibility('{{category_id}}')">
-				<h3>{{category_name}}</h3>
-			</button>
+			{% if category == site.categories.first %}
+				<button id="{{category_id}}-button" class="filter-button" onclick="switch_visibility('{{category_id}}')" style="background-color: #FF3591; color: black; border: 1px solid #FF3591;">
+					<h3>{{category_name}}</h3>
+				</button>
+			{% else %}
+				<button id="{{category_id}}-button" class="filter-button" onclick="switch_visibility('{{category_id}}')">
+					<h3>{{category_name}}</h3>
+				</button>
+			{% endif %}
 		{% endfor %}
 
 	</div>
@@ -34,7 +40,11 @@ permalink: /categories/
 
 		<div class="category">
 
-			<div id="{{category_id}}-posts" class="posts">
+			{% if category == site.categories.first %}
+				<div id="{{category_id}}-posts" class="posts" style="display: block;">
+			{% else %}
+				<div id="{{category_id}}-posts" class="posts">
+			{% endif %}
 				
 				{% for post in posts %}
 				<div class="post">
@@ -63,3 +73,5 @@ permalink: /categories/
 	{% endfor %}
 
 </section>
+
+{% include footer.html %}

@@ -5061,6 +5061,15 @@ cite {
     padding: 0.8rem;
     font-size: 1.2rem;
   }
+
+  .post-grid-container {
+    grid-template-areas:
+      'image'
+      'image'
+      'date'
+      'author'
+      'tags';
+  }
 }
 .div_formula {
 
@@ -5168,4 +5177,28 @@ cite {
 .post-grid-container:hover .tag{
   border: 1px solid black;
   color: black;
+}
+
+@media only screen and (max-width: 730px){
+
+  .post-image{
+    width: 70%;
+    height: auto;
+    margin:auto;
+  }
+
+  .post-image img{
+    margin:auto;
+    width: 100px;
+    height: 50px;
+  }
+
+  .post-grid-container {
+    grid-template-areas:
+    'image'
+    'title'
+    'date'
+    'author'
+    'tags';
+  }
 }
