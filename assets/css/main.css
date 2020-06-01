@@ -5078,18 +5078,20 @@ cite {
 .chapter img {
 }
 
+#categories{
+  background-image: url(../img/bg_section.jpg);
+  padding-bottom: 3%;
+}
+
 #categories-filter{
   width: 75%;
   margin: auto;
-  margin-top: 5%;
+  padding-top: 1%;
   margin-bottom: 5%;
 }
 
 #categories-title{
   text-align: center;
-}
-
-#categories-title{
   color: white;
 }
 
@@ -5112,6 +5114,7 @@ cite {
   margin: auto;
   margin-bottom: 25px;
   background-color: #262626;
+  border-radius: 16px;
 }
 
 .post-grid-container {
